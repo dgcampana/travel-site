@@ -1,19 +1,48 @@
 <!DOCTYPE HTML>
 <html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{fragments/main_layout}">
 <head>
-    <title>Spring Boot Thymeleaf + Spring Security</title>
+<title>Armonii</title>
 </head>
 <body>
-<div layout:fragment="content" class="container">
-
-    <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work.
-            It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>
-            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
-    </div>
-</div>
+	<div layout:fragment="content">
+		<div class="container padding-top-30px">
+			<div class="row">
+				<div id="right-panel" class="col-sm-12 col-md-7">
+					<div class="card margin-bottom-30px shadow-sm">
+						<img src="https://img1.mtmedia.com.mx/covers/barrancas-del-cobre-chihuahua-mexico.jpg"
+							class="card-img-top" alt="..." >
+						<div class="card-body">
+							<h5 class="card-title text-uppercase text-center">BARRANCAS DEL COBRE & EL CHEPE</h5>
+							<div class="card-text font-13px height-content-card">
+								En este viaje por la mañana te
+								impresionarás con la cascada Velo de Novia y posteriormente
+								disfrutarás del -Festival de las Almas- y de un bonito atardecer
+								en Valle de Bravo.
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="row">
+								<div class="col-6 col-md-5">
+									<button type="button" class="btn btn-outline-primary btn-sm w-100">Reserva</button>
+								</div>
+								<div class="col-4 offset-xs-2 col-md-4 offset-md-4 text-right no-padding-right ">
+									<button class="btn-simple">
+										<i class="material-icons color-armonii">
+										fullscreen
+										</i>
+									</button>
+									<button class="btn-simple margin-left-20px margin-right-10px">
+										<i class="material-icons color-armonii">favorite_border</i>
+									</button>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="left-panel" class="col-sm-12 col-md-4"></div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

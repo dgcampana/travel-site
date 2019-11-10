@@ -1,29 +1,39 @@
 <header th:fragment="header" xmlns:th="http://www.w3.org/1999/xhtml">
-	<nav class="uk-navbar-container" uk-navbar>
-	    
-	    <div class="uk-navbar-left uk-margin-large-left">
-	        <ul class="uk-navbar-nav">
-	            <li class="uk-active"><a href="#">Armony</a></li>
-	            <li><a href="#">Item</a></li>
-	        </ul>
-	    </div>
-	    <div class="uk-navbar-right uk-margin-large-right">
-	        <ul class="uk-navbar-nav">
-	            <li>
-	                <a href="#">Parent</a>
-	                <div class="uk-navbar-dropdown">
-	                    <ul class="uk-nav uk-navbar-dropdown-nav">
-	                        <li class="uk-active"><a href="#">Active</a></li>
-	                        <li><a href="#">Item</a></li>
-	                        <li class="uk-nav-header">Header</li>
-	                        <li><a href="#">Item</a></li>
-	                        <li><a href="#">Item</a></li>
-	                        <li class="uk-nav-divider"></li>
-	                        <li><a href="#">Item</a></li>
-	                    </ul>
-	                </div>
-	            </li>
-	        </ul>
-	    </div>
-	</nav>
+	<style type="text/css">
+		.nav {
+			background-color: rgb(255, 255, 255);
+			height: 77px;
+		}
+		
+		.border-nav {
+			width: 100%;
+			border-bottom: 1px solid rgba(219, 219, 219, 1);
+		}
+		
+		.icon-logo {
+			height: 24px;
+			width: 24px;
+			border-right: 1px solid #000;
+		}
+	</style>
+	<div class="container ">
+		<div class="row nav padding-top-30px">
+			<div class="col-2 col-md-1  icon-logo text-center">
+				<i class="material-icons"> local_florist </i>
+			</div>
+			<div class="col-md-2 d-sm-none d-none d-md-block d-lg-block d-xl-block">
+				Armonii
+			</div>
+			<div class="col-2 offset-xs-4 col-md-1 offset-md-6">
+				<i class="material-icons"> public</i>
+			</div>
+			<div class="col-2 col-md-1">
+				<i class="material-icons"> star_border</i>
+			</div>
+			<div class="col-2 col-md-1">
+				<i class="material-icons"> perm_identity</i>
+			</div>
+		</div>
+	</div>
+	<div class="border-nav"></div>
 </header>
