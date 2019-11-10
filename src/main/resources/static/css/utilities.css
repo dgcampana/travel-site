@@ -123,7 +123,6 @@
 }
 
 
-
 /* xs devices  */
 @media (max-width: 575px) { 
 	.offset-xs-4 {
@@ -134,6 +133,13 @@
 	}
 	.height-content-card {
 	max-height: 100px;
+	}
+}
+
+/* old devices  */
+@media (max-width: 333px) { 
+	.no-margin-right-xs {
+		margin-right: 0 !important;
 	}
 }
 
