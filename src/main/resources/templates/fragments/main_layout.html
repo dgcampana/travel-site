@@ -1,23 +1,107 @@
 <!DOCTYPE html>
-<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<html  lang="es" xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
     <head>
-      	<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" th:href="@{css/bootstrap/bootstrap.css}" />
-        <link rel="stylesheet" th:href="@{css/utilities.css}" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
+	    <title>Travel Admin</title>
+	    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 10]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+			<![endif]-->
+	    <!-- Meta -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	    <meta name="description" content="Administracion de kmp travels applications" />
+	    <meta name="keywords" content="admin armonii, admin kmp, kmp apps, kmp applications, kmp">
+	    <meta name="author" content="kmp applications" />
+	
+	    <!-- Favicon icon -->
+	    <link rel="icon" th:href="@{images/favicon.ico}" type="image/x-icon">
+	    <!-- fontawesome icon -->
+	    <link rel="stylesheet" th:href="@{fonts/fontawesome/css/fontawesome-all.min.css}">
+	    <!-- animation css -->
+	    <link rel="stylesheet" th:href="@{plugins/animation/css/animate.min.css}">
+	    <!-- vendor css -->
+	    <link rel="stylesheet" th:href="@{css/style.css}">
     </head>
     <body>
-    <!--header.html  that's here  -->
+	    <!-- [ Pre-loader ] start -->
+	    <div class="loader-bg">
+	        <div class="loader-track">
+	            <div class="loader-fill"></div>
+	        </div>
+	    </div>
+	    <!-- [ Pre-loader ] End -->
+	    
+	    <!--header.html  that's here  -->
+        <div th:replace="fragments/nav :: nav"></div>
+        
+        <!--header.html  that's here  -->
         <div th:replace="fragments/header :: header"></div>
+        
+        <!--header.html  that's here  -->
+        <div th:replace="fragments/header-user-list :: header-user-list"></div>
+	    
+    	<!--header.html  that's here  -->
+        <div th:replace="fragments/header-chat :: header-chat"></div>
     
+    	<!--page view that's here  -->
         <div layout:fragment="content"></div>
-    <!--footer.html  that's here  -->
+        
+    	<!--footer.html  that's here  -->
         <div th:replace="fragments/footer :: footer"></div>
         
-        <script th:src="@{js/jquery-3.3.1.slim.min.js}"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script th:src="@{js/bootstrap.min.js}"></script>
+        <!-- Warning Section Starts -->
+	    <!-- Older IE warning message -->
+	    <!--[if lt IE 11]>
+	        <div class="ie-warning">
+	            <h1>Warning!!</h1>
+	            <p>You are using an outdated version of Internet Explorer, please upgrade
+	               <br/>to any of the following web browsers to access this website.
+	            </p>
+	            <div class="iew-container">
+	                <ul class="iew-download">
+	                    <li>
+	                        <a href="http://www.google.com/chrome/">
+	                            <img th:src="@{images/browser/chrome.png}" alt="Chrome">
+	                            <div>Chrome</div>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a href="https://www.mozilla.org/en-US/firefox/new/">
+	                            <img th:src="@{images/browser/firefox.png}" alt="Firefox">
+	                            <div>Firefox</div>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a href="http://www.opera.com">
+	                            <img th:src="@{images/browser/opera.png}" alt="Opera">
+	                            <div>Opera</div>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a href="https://www.apple.com/safari/">
+	                            <img th:src="@{images/browser/safari.png}" alt="Safari">
+	                            <div>Safari</div>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+	                            <img th:src="@{images/browser/ie.png}" alt="">
+	                            <div>IE (11 & above)</div>
+	                        </a>
+	                    </li>
+	                </ul>
+	            </div>
+	            <p>Sorry for the inconvenience!</p>
+	        </div>
+	    <![endif]-->
+	    <!-- Warning Section Ends -->
+    
+        <!-- Required Js -->
+	    <script th:src="@{js/vendor-all.min.js}"></script>
+	    <script th:src="@{plugins/bootstrap/js/bootstrap.min.js}"></script>
+	    <script th:src="@{js/pcoded.min.js}"></script>
     </body>
 </html>
