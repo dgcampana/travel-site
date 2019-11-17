@@ -9,7 +9,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
-import com.kmp.site.travelweb.application.service.impl.LoginService;
+import com.kmp.site.travelweb.application.service.impl.LoginUserDetailsService;
 
 @Configuration
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -18,7 +18,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     private LoggingAccessDeniedHandler accessDeniedHandler;
 	
 	@Autowired
-	private LoginService loginService;
+	private LoginUserDetailsService loginService;
 	
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder build) throws Exception {
@@ -29,19 +29,21 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-			.antMatchers("/js/**","/css/**","/images/**","/fonts/**","/plugins/**","/scss/**","/webjars/**").permitAll()
-			//.antMatchers("/dashboard/**").hasAnyRole("ROLE_USER","ROLE_")
-            .anyRequest().authenticated()
+				.antMatchers("/application/**","/js/**","/css/**","/images/**","/fonts/**","/plugins/**","/scss/**","/webjars/**").permitAll()
+				//.antMatchers("/dashboard/**").hasAnyRole("ROLE_USER","ROLE_")
+            	.anyRequest().authenticated()
             .and()
-            .formLogin().loginPage("/login").permitAll()
+            	.formLogin().loginPage("/login").permitAll()
             .and()
-            .logout().invalidateHttpSession(true)
-            .clearAuthentication(true)
-            .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-            .logoutSuccessUrl("/login?logout")
-            .permitAll()
+            	.logout()
+		            .deleteCookies("JSESSIONID")
+		            .invalidateHttpSession(true)
+		            .clearAuthentication(true)
+		            .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+		            .logoutSuccessUrl("/login?logout")
+		            .permitAll()
             .and()
-            .exceptionHandling().accessDeniedHandler(accessDeniedHandler);
+            	.exceptionHandling().accessDeniedHandler(accessDeniedHandler);
 	}
 
 	@Bean

@@ -21,7 +21,7 @@ import com.kmp.site.travelweb.application.dto.login.ResponseUserCheck;
 import com.kmp.site.travelweb.domain.client.LoginClient;
 
 @Service
-public class LoginService implements UserDetailsService{
+public class LoginUserDetailsService implements UserDetailsService{
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Value("${properties.secure.magicCode}")
