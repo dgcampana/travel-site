@@ -34,10 +34,8 @@
             <div class="card">
                 <div class="card-body text-center">
                     <div class="mb-4">
-                        <i class="feather icon-unlock auth-icon"></i>
+                        <img class="img-fluid" alt="" src="../images/logo.png">
                     </div>
-                    <h3 class="mb-4">Armonii</h3>
-                    
                     <form th:action="@{/login}" method="post">
 	                    <div th:if="${param.error}">
 		                    <div class="alert alert-danger">
@@ -61,7 +59,7 @@
 	                            <label for="checkbox-fill-a1" class="cr"> Recuerdame</label>
 	                        </div>
 	                    </div>
-	                    <button id="login-submit" class="btn btn-primary shadow-2 mb-4">Iniciar sesión</button>
+	                    <button id="login-submit" class="btn btn-primary shadow-2 mb-4 btn-square">Iniciar sesión</button>
                     </form>
                     <p class="mb-2 text-muted">olvidaste tu contraseña? <a href="auth-reset-password-v5.html">Recuperalá</a></p>
                     <p class="mb-0 text-muted">no tienes una cuenta? <a href="auth-signup-v5.html">Registrate</a></p>

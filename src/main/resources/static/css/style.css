@@ -8175,10 +8175,11 @@ table.footable-paging-center > tfoot > tr.footable-paging > td {
 
 /* image varient start */
 .aut-bg-img {
-  background-image: url("../images/bg-images/bg4.jpg");
+  background-image: url("../images/bg-images/bgLogin.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  
 }
 
 .aut-bg-img-side p {
@@ -8415,13 +8416,13 @@ a.btn-theme.active {
 /* Alternate buttons */
 .btn-primary {
   color: #fff;
-  background-color: #04a9f5;
-  border-color: #04a9f5;
+  background-color: #000000;
+  border-color: #000000;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #038fcf;
-  border-color: #0386c3;
+  background-color: #000000;
+  border-color: #000000;
 }
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
