@@ -24,7 +24,7 @@ import com.kmp.site.travelweb.domain.client.LoginClient;
 public class LoginUserDetailsService implements UserDetailsService{
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-	@Value("${properties.secure.magicCode}")
+	@Value("${properties.secure.code}")
 	private String secureCode;
 	
 	@Autowired

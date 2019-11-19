@@ -1,5 +1,15 @@
 $(document).ready(function() {
+	submitLogin();
+	
+});
 
+function validationLoginForm(){
+	var user = $("#username").val();
+	var password = $("#password").val();
+	
+}
+
+function submitLogin(){
 	$("#btnSubmit").click(function() {
 		var user = $("#username").val();
 		var password = $("#password").val();
@@ -11,7 +21,7 @@ $(document).ready(function() {
 		
 		$.ajax({
 		    type: "POST",
-		    url: "https://kmp-travel-ws.herokuapp.com/api/login",
+		    url: _urlBackend + "api/login",
 		    data: JSON.stringify(request),
 		    contentType: "application/json",
 
@@ -27,14 +37,15 @@ $(document).ready(function() {
 		    error: function (e) {
 		    	$("#ajaxError").removeClass("d-none");
 		    	$("#ajaxErrorMessage").text(e.responseJSON.message);
-		        console.error(e);
+		    	
+		    	setTimeout(function(){ 
+		    		$("#ajaxError").addClass("d-none");
+		    	}, 3000);
 		    },
 		    complete: function() {
-		    	$("#loader").addClass("d-none");
 			}
 		});
-		
-		
 	});
+}
 
-});
+

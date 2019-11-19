@@ -55,9 +55,9 @@
 		                </div>
 		                </div>
 		                
-		                <div th:if="${param.logout}">
-		                    <div class="alert alert-info">
-		                        Has sido desconectado.
+		                <div th:if="${ accessDenied == true }">
+		                    <div class="alert alert-danger">
+		                        <span th:text="${accessDeniedMsg}"></span>
 		                    </div>
 		                </div>
 	                    <div class="input-group mb-3">
@@ -82,6 +82,12 @@
     </div>
 
     <!-- Required Js -->
+    <script th:inline="javascript">
+      /*<![CDATA[*/
+        var _urlBackend = /*[[${urlBackend}]]*/ '';
+       /*]]>*/
+	</script> 
+    
     <script th:src="@{js/vendor-all.min.js}"></script>
     <script th:src="@{application/login/login.js}" type="text/javascript"></script>
     <script th:src="@{plugins/bootstrap/js/bootstrap.min.js}"></script>

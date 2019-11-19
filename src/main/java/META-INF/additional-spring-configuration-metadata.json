@@ -1,5 +1,12 @@
-{"properties": [{
-  "name": "backend.services.api",
-  "type": "java.lang.String",
-  "description": "A description for 'backend.services.api'"
-}]}
+{"properties": [
+  {
+    "name": "backend.services.api",
+    "type": "java.lang.String",
+    "description": "A description for 'backend.services.api'"
+  },
+  {
+    "name": "properties.secure.code",
+    "type": "java.lang.String",
+    "description": "A description for 'properties.secure.code'"
+  }
+]}
