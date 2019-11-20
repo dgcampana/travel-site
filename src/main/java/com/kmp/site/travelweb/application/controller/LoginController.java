@@ -31,7 +31,7 @@ public class LoginController {
 	   if(auth != null) {
 		   auth.getAuthorities();
 		   if(utilAuthenticationService.isRootOrAgent(auth)) {
-			   return "user/index"; 
+			   return "partner/index"; 
 		   } else {
 			   model.addAttribute("accessDenied", true);
 			   model.addAttribute("accessDeniedMsg", "Lo sentimos, aún no eres partner"); 
