@@ -7,27 +7,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-
 @Controller
 @Secured({"ROLE_ROOT","ROLE_AGENT"})
-public class UserController {
-
+public class ExperiencesController {
+	
 	@Value("${backend.services.api}")
 	private String urlBackend;
 	
-	@GetMapping("/dashboard")
-    public ModelAndView dashboard(Authentication auth) {
-		ModelAndView mv = new ModelAndView("partner/index");
+	@GetMapping("/experiences")
+    public ModelAndView userExperiences(Authentication auth) {
+		ModelAndView mv = new ModelAndView("partner/experiences");
 		mv.addObject("urlBackend", this.urlBackend);
 		
 		return mv;
     }
-	
-	
-	
-	
-	
-	
-	
-	
+
 }

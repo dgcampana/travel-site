@@ -7,6 +7,6 @@
   {
     "name": "properties.secure.code",
     "type": "java.lang.String",
-    "description": "A description for 'properties.secure.code'"
+    "description": "Codigo utililzado como hash para la autenticación, esta misma propiedad tiene que estar en el backend"
   }
 ]}

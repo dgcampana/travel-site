@@ -7,27 +7,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-
 @Controller
 @Secured({"ROLE_ROOT","ROLE_AGENT"})
-public class UserController {
-
+public class AddonController {
+	
 	@Value("${backend.services.api}")
 	private String urlBackend;
 	
-	@GetMapping("/dashboard")
-    public ModelAndView dashboard(Authentication auth) {
-		ModelAndView mv = new ModelAndView("partner/index");
+	@GetMapping("/add-on")
+    public ModelAndView userAddons(Authentication auth) {
+		ModelAndView mv = new ModelAndView("partner/add-ons");
 		mv.addObject("urlBackend", this.urlBackend);
 		
 		return mv;
     }
-	
-	
-	
-	
-	
-	
-	
-	
+
 }

@@ -31,6 +31,7 @@ public class LoginController {
 	   if(auth != null) {
 		   auth.getAuthorities();
 		   if(utilAuthenticationService.isRootOrAgent(auth)) {
+			   model.addAttribute("urlBackend", this.urlBackend);
 			   return "partner/index"; 
 		   } else {
 			   model.addAttribute("accessDenied", true);
