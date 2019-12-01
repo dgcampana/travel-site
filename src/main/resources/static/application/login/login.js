@@ -35,6 +35,7 @@ function submitLogin(){
 		    	$("#loginForm").submit();
 		    },
 		    error: function (e) {
+		    	$("#loader").addClass("d-none");
 		    	$("#ajaxError").removeClass("d-none");
 		    	$("#ajaxErrorMessage").text(e.responseJSON.message);
 		    	
