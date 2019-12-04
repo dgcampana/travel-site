@@ -38,6 +38,7 @@ function dataTableExperiences (data) {
 	console.log(data);
 	$('#experiences-table').DataTable( {
 		"bLengthChange": false,
+		"searching": false, 
 		data: _travels,
 	    columns: [
 	        { data: 'id' },
@@ -45,6 +46,12 @@ function dataTableExperiences (data) {
 	        { data: 'departDate' },
 	        { data: 'returnDate' },
 	        { data: 'status' }
-	    ]
+	    ],
+	    "columnDefs": [ {
+	        "targets": [2, 3],
+	        "render": function ( data, type, row, meta ) {
+	          return data.substr( 0, 10 );
+	        }
+	      } ]
 	});
 }
