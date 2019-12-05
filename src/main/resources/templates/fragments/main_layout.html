@@ -26,6 +26,8 @@
 	    <link rel="stylesheet" th:href="@{css/style.css}">
 	    <!-- data tables css -->
 	    <link rel="stylesheet" th:href="@{plugins/data-tables/css/datatables.min.css}">
+	    <!-- Notification css -->
+		<link rel="stylesheet" th:href="@{plugins/notification/css/notification.min.css}" >
     </head>
     <body>
 	    <!-- [ Pre-loader ] start -->
@@ -105,6 +107,34 @@
 	    <script th:src="@{application/all/init.js}" type="text/javascript"></script>
 	    <script th:src="@{plugins/bootstrap/js/bootstrap.min.js}"></script>
 	    <script th:src="@{js/pcoded.min.js}"></script>
+	    <!-- Notification Js -->
+		<script th:src="@{plugins/notification/js/bootstrap-growl.min.js}"></script>
+		<script th:inline="javascript">
+		//types: inverse, success, warning, danger
+		function notify(message, type) {
+		    $.growl({
+		        message: message
+		    }, {
+		        type: type,
+		        allow_dismiss: false,
+		        label: 'Cancel',
+		        className: 'btn-xs btn-inverse',
+		        placement: {
+		            from: 'top',
+		            align: 'right'
+		        },
+		        delay: 2500,
+		        animate: {
+		            enter: 'animated flipInX',
+		            exit: 'animated flipOutX'
+		        },
+		        offset: {
+		            x: 30,
+		            y: 30
+		        }
+		    });
+		}
+		</script> 
 	    <div layout:fragment="javascriptSources"></div>
 	    
 	    

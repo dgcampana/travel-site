@@ -28,15 +28,14 @@ function getMyExperiences( page ) {
 	    success: function (data) {
 	    	if( data.code == 200 ) {
 	    		_travels = data.travels;
-	    		
 	    		_tableExperience =
 	    		dataTableExperiences (_travels);
 	    	}else{
-	    		//TODO: enviar mensaje de error
-	    		alert("No se pudieron cargar tu experiencias. ");
+	    		notify('Lo sentimos no pudimos cargar tus experiencias principales :(', 'danger');
 	    	}
 	    },
 	    error: function (e) {
+	    	notify('Error en el servidor contacte a soporte.', 'danger');
 	    },
 	    complete: function() {
 	    	$("#loader").addClass("d-none");
@@ -57,16 +56,30 @@ function dataTableExperiences (data) {
 	        { data: 'returnDate' },
 	        { data: 'status' }
 	    ],
-	    "columnDefs": [ {
-	        "targets": [2, 3],
-	        "render": function ( data, type, row, meta ) {
-	          return data.substr( 0, 10 );
-	        }
-	      } ]
+	    "columnDefs": [ 
+	    	{
+    		"targets": [2, 3],
+    		"render": function ( data ) {
+			    		return data.substr( 0, 10 );
+					}
+	        },
+	        {
+	        "targets": [4],
+	        "render": function ( data ) {
+		        	if(data == 'ACTIVE'){  
+		        		return '<a style="width: 120px !important;" class="text-white label theme-bg f-12">' + data + '</a>';
+		        	}else{
+		        		return '<a style="width: 120px !important;" class="label theme-bg2 f-12 text-white">' + data + '</a>';
+		        	}
+	        	}
+	        } 
+	    ]
 	});
-	
 	return tableExperience;
 }
+
+
+   
 
 
 
