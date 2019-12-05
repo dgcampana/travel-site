@@ -1,6 +1,10 @@
 HELP.md
 .gradle
+.gradle/
 build/
+/build
+build
+build.log
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**
 !**/src/test/**
@@ -19,6 +23,11 @@ build/
 *.iws
 *.iml
 *.ipr
+*.jar
+*.sw?
+*~
+.#*
+*#
 out/
 
 ### NetBeans ###
@@ -30,3 +39,26 @@ out/
 
 ### VS Code ###
 .vscode/
+/code
+
+### OTHERS ###
+.*.md.html
+.DS_Store
+.metadata
+.recommenders
+MANIFEST.MF
+_site/
+activemq-data
+bin
+dependency-reduced-pom.xml
+dump.rdb
+interpolated*.xml
+lib/
+manifest.yml
+overridedb.*
+target
+transaction-logs
+.flattened-pom.xml
+secrets.yml
+.gradletasknamecache
+.sts4-cache
