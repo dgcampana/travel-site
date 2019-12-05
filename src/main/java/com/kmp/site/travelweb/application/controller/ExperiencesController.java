@@ -5,6 +5,7 @@ import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -19,6 +20,14 @@ public class ExperiencesController {
 		ModelAndView mv = new ModelAndView("partner/experiences");
 		mv.addObject("urlBackend", this.urlBackend);
 		
+		return mv;
+    }
+	
+	@GetMapping("/experience")
+    public ModelAndView getExperience(Authentication auth, @RequestParam String id) {
+		ModelAndView mv = new ModelAndView("partner/experience");
+		mv.addObject("urlBackend", this.urlBackend);
+		mv.addObject("idExperience",id);
 		return mv;
     }
 

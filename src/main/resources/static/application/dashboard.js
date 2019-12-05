@@ -1,10 +1,18 @@
 var _travels = [];
+var _tableExperience;
 
 $(document).ready( function () {
 	getMyExperiences(1);
+	
+	//Hacer clic a la fila seleccionada de la tabla de experiencias.
+	$('#experiences-table tbody').on('click', 'tr', function () {
+	    var data = _tableExperience.row( this ).data();
+	    location.href = 'experience?id='+data.id;
+	} );
 });
 
-
+//Realiza la petecion al servicio para obtener la experiencias del asociadas
+//al usuario si este pertenece a una agencia
 function getMyExperiences( page ) {
 	var token = localStorage.getItem('token');
 	$.ajax({
@@ -20,9 +28,12 @@ function getMyExperiences( page ) {
 	    success: function (data) {
 	    	if( data.code == 200 ) {
 	    		_travels = data.travels;
+	    		
+	    		_tableExperience =
 	    		dataTableExperiences (_travels);
 	    	}else{
-	    		
+	    		//TODO: enviar mensaje de error
+	    		alert("No se pudieron cargar tu experiencias. ");
 	    	}
 	    },
 	    error: function (e) {
@@ -33,10 +44,9 @@ function getMyExperiences( page ) {
 	});
 }
 
-
+//Pinta la tabla del experiencias en el dashboard
 function dataTableExperiences (data) {
-	console.log(data);
-	$('#experiences-table').DataTable( {
+	var tableExperience = $('#experiences-table').DataTable( {
 		"bLengthChange": false,
 		"searching": false, 
 		data: _travels,
@@ -54,4 +64,11 @@ function dataTableExperiences (data) {
 	        }
 	      } ]
 	});
+	
+	return tableExperience;
 }
+
+
+
+
+
