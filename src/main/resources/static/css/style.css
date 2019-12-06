@@ -271,6 +271,11 @@ p.text-muted {
 .card .card-body {
   padding: 30px 25px;
 }
+
+.card-block-min-padding{
+	padding: 0px 15px !important;
+}
+
 .card.card-load {
   position: relative;
   overflow: hidden;
@@ -9266,6 +9271,11 @@ a.btn-theme.active {
   -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.05);
           box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.05);
 }
+
+.tab-content-less-padding {
+  padding: 17px 15px !important;
+}
+
 .tab-content > .tab-pane {
   display: none;
 }

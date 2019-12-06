@@ -21,7 +21,8 @@
                                     </div>
                                     <ul class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
-                                        <li class="breadcrumb-item"><a href="#!">Experiencias</a></li>
+                                        <li class="breadcrumb-item"><a href="/experiences">Experiencias</a></li>
+                                        <li class="breadcrumb-item">¡VALLE DE BRAVO, FESTIVAL DE LAS ALMAS!</li>
                                     </ul>
                                 </div>
                             </div>
@@ -31,18 +32,102 @@
                     <div class="main-body">
                         <div class="page-wrapper">
                             <!-- [ Main Content ] start -->
-                            <p th:text="${idExperience}"></p>
+                            <!-- [ Information ] start -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>N&uacute;mero serie. </h5><span th:text="${idExperience}"></span>
+                                            <div class="card-header-right">
+                                                <div class="btn-group card-option">
+                                                    <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="feather icon-more-horizontal"></i>
+                                                    </button>
+                                                    <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                        <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
+                                                        <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                        <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
+                                                        <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block-min-padding card-block">
+                                            <!-- [ Information ] start -->
+			                            	<div class="row">
+				                            	<div class="col-sm-12">
+				                                    <div class="row">
+				                                        <div class="col-md-3 col-sm-12">
+				                                            <ul class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+				                                                <li><a class="nav-link text-left active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">General</a></li>
+				                                                <li><a class="nav-link text-left" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Reservaciones</a></li>
+				                                                <li><a class="nav-link text-left" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Itinerario</a></li>
+				                                                <li><a class="nav-link text-left" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Im&aacute;genes</a></li>
+				                                            </ul>
+				                                        </div>
+				                                        <div class="col-md-9 col-sm-12">
+				                                            <div class="tab-content tab-content-less-padding" id="v-pills-tabContent">
+				                                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+				                                                    <div class="form-row">
+					                                                    <div class="form-group col-md-12">
+					                                                        <label for="inputEmail4">T&iacute;tulo</label>
+					                                                        <input type="email" class="form-control" id="inputTitle" placeholder="">
+					                                                    </div>
+					                                                </div>
+					                                                <div class="form-row">
+					                                                	<div class="col-md-6">
+						                                                	<div class="form-group ">
+						                                                        <label for="inputEmail4">Fecha partida</label>
+						                                                        <input type="email" class="form-control" id="inputDepartDate" placeholder="">
+						                                                    </div>
+						                                                    <div class="form-group ">
+						                                                        <label for="inputEmail4">Fecha Regreso</label>
+						                                                        <input type="email" class="form-control" id="inputReturnDate" placeholder="">
+						                                                    </div>
+					                                                	</div>
+					                                                	<div class="col-md-6">
+					                                                		<div class="form-group" >
+					                                                            <label for="exampleFormControlTextarea1">Descripci&oacute;n</label>
+					                                                            <textarea class="form-control" style="height: 130px" id="textareaDescription" ></textarea>
+					                                                        </div>
+					                                                	</div>
+					                                                </div>
+				                                                </div>
+				                                                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+				                                                    <p class="mb-0">Culpa dolor voluptate do laboris laboris irure reprehenderit id incididunt duis pariatur mollit aute magna pariatur consectetur. Eu veniam duis non ut dolor deserunt commodo et
+				                                                        minim in quis
+				                                                        laboris ipsum velit id veniam. Quis ut consectetur adipisicing officia excepteur non sit. Ut et elit aliquip labore Lorem enim eu. Ullamco mollit occaecat dolore ipsum id officia mollit qui
+				                                                        esse anim eiusmod do sint minim consectetur qui.</p>
+				                                                </div>
+				                                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+				                                                    <p class="mb-0">Fugiat id quis dolor culpa eiusmod anim velit excepteur proident dolor aute qui magna. Ad proident laboris ullamco esse anim Lorem Lorem veniam quis Lorem irure occaecat velit
+				                                                        nostrud magna
+				                                                        nulla. Velit et et proident Lorem do ea tempor officia dolor. Reprehenderit Lorem aliquip labore est magna commodo est ea veniam consectetur.</p>
+				                                                </div>
+				                                                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+				                                                    <p class="mb-0">Eu dolore ea ullamco dolore Lorem id cupidatat excepteur reprehenderit consectetur elit id dolor proident in cupidatat officia. Voluptate excepteur commodo labore nisi cillum duis
+				                                                        aliqua do.
+				                                                        Aliqua amet qui mollit consectetur nulla mollit velit aliqua veniam nisi id do Lorem deserunt amet. Culpa ullamco sit adipisicing labore officia magna elit nisi in aute tempor commodo eiusmod.
+				                                                    </p>
+				                                                </div>
+				                                            </div>
+				                                        </div>
+				                                    </div>
+				                                </div>
+			                            	</div>
+			                            	<!-- [ Information ] end -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [ images ] end -->
+
                             <!-- [ Main Content ] end -->
                         </div>
                     </div>  
                 </div>
             </div>
         </div>
-        <script th:inline="javascript">
-	      /*<![CDATA[*/
-	        var _urlBackend = /*[[${urlBackend}]]*/ '';
-	       /*]]>*/
-		</script> 
     </div>
     <!-- [ Main Content ] end -->
 </body>
