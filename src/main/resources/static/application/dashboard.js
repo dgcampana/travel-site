@@ -50,7 +50,6 @@ function dataTableExperiences (data) {
 		"searching": false, 
 		data: _travels,
 	    columns: [
-	        { data: 'id' },
 	        { data: 'title' },
 	        { data: 'departDate' },
 	        { data: 'returnDate' },
@@ -58,13 +57,13 @@ function dataTableExperiences (data) {
 	    ],
 	    "columnDefs": [ 
 	    	{
-    		"targets": [2, 3],
+    		"targets": [1, 2],
     		"render": function ( data ) {
 			    		return data.substr( 0, 10 );
 					}
 	        },
 	        {
-	        "targets": [4],
+	        "targets": [3],
 	        "render": function ( data ) {
 		        	if(data == 'ACTIVE'){  
 		        		return '<a style="width: 120px !important;" class="text-white label theme-bg f-12">' + data + '</a>';
