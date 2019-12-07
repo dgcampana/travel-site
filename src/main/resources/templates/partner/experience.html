@@ -44,10 +44,9 @@
                                                         <i class="feather icon-more-horizontal"></i>
                                                     </button>
                                                     <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
-                                                        <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
-                                                        <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
-                                                        <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
-                                                        <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+                                                        <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> pantalla completa </span><span style="display:none"><i class="feather icon-minimize"></i>salir de pantalla completa </span></a></li>
+                                                        <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> contraer</span><span style="display:none"><i class="feather icon-plus"></i> expandir</span></a></li>
+                                                        <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> eliminar</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -70,24 +69,24 @@
 				                                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
 				                                                    <div class="form-row">
 					                                                    <div class="form-group col-md-12">
-					                                                        <label for="inputEmail4">T&iacute;tulo</label>
+					                                                        <label for="inputEmail4">T&iacute;tulo:</label>
 					                                                        <input type="email" class="form-control" id="inputTitle" placeholder="">
 					                                                    </div>
 					                                                </div>
-					                                                <div class="form-row">
+					                                                <div class="row">
 					                                                	<div class="col-md-6">
 						                                                	<div class="form-group ">
-						                                                        <label for="inputEmail4">Fecha partida</label>
-						                                                        <input type="email" class="form-control" id="inputDepartDate" placeholder="">
+						                                                        <label for="date-start">Fecha partida:</label>
+						                                                        <input type="text" id="departDate" class="form-control" placeholder="">
 						                                                    </div>
 						                                                    <div class="form-group ">
-						                                                        <label for="inputEmail4">Fecha Regreso</label>
-						                                                        <input type="email" class="form-control" id="inputReturnDate" placeholder="">
+						                                                        <label for="date-end">Fecha Regreso:</label>
+						                                                        <input type="text" id="returnDate" class="form-control" placeholder="">
 						                                                    </div>
 					                                                	</div>
 					                                                	<div class="col-md-6">
 					                                                		<div class="form-group" >
-					                                                            <label for="exampleFormControlTextarea1">Descripci&oacute;n</label>
+					                                                            <label for="exampleFormControlTextarea1">Descripci&oacute;n:</label>
 					                                                            <textarea class="form-control" style="height: 130px" id="textareaDescription" ></textarea>
 					                                                        </div>
 					                                                	</div>
@@ -130,5 +129,17 @@
         </div>
     </div>
     <!-- [ Main Content ] end -->
+    <div layout:fragment="javascriptSources">
+	 
+	   	<!-- datatable Js -->
+	   	<script th:src="@{plugins/data-tables/js/datatables.min.js}"></script>
+	   	<script th:src="@{application/dashboard.js}"></script>
+	   	
+	   	 <!-- material datetimepicker Js -->
+	    <script src="http://momentjs.com/downloads/moment-with-locales.min.js"></script>
+	    <script th:src="@{plugins/material-datetimepicker/js/bootstrap-material-datetimepicker.js}"></script>
+	   	
+	   	<script th:src="@{application/partner/experience.js}"></script>
+    </div>
 </body>
 </html>

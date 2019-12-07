@@ -11197,4 +11197,13 @@ div.code-toolbar > .toolbar span:hover {
             transform: scale(1);
   }
 }
-/**====== File Upload css end ======**/
+
+.dtp div.dtp-date, .dtp div.dtp-time  { background: #000 !important; }
+.dtp > .dtp-content > .dtp-date-view > header.dtp-header{ background: #000 !important; }
+.dtp .p10 > a { color: #FFF !important; }
+.dtp table.dtp-picker-days tr > td > a.selected { background: #000 !important; }
+
+/**====== File Upload css end    ======**/
+
+
+
