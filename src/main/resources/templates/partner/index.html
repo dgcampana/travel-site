@@ -6,7 +6,6 @@
 <title>Armonii</title>
 </head>
 <body>
-	
 	<!-- [ Main Content ] start -->
     <div class="pcoded-main-container" layout:fragment="content">
         <div class="pcoded-wrapper">
@@ -92,7 +91,12 @@
                                             </div>
                                         </div>
                                         <div class="card-block pb-0">
-                                            <div class="table-responsive">
+                                        	<div id="loanding-experiences" class="d-flex justify-content-center">
+                                                <div class="spinner-border spinner-border-sm" role="status">
+                                                    <span class="sr-only">Cargando...</span>
+                                                </div>
+                                            </div>
+                                            <div id="container-experiences-table" class="table-responsive d-none">
                                                 <table id="experiences-table" class="display table nowrap table-bordered table-hover" style="width: 100%">
                                                     <thead>
                                                         <tr>
@@ -100,7 +104,6 @@
                                                             <th>Partida</th>
                                                             <th>Regreso</th>
                                                             <th>Estatus</th>
-                                                            
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -121,11 +124,13 @@
         </div>
         
     </div>
-    
+    <div layout:fragment="cssSources">
+   	
+    </div>
     <div layout:fragment="javascriptSources">
    	<!-- datatable Js -->
    	<script th:src="@{plugins/data-tables/js/datatables.min.js}"></script>
-   	<script th:src="@{application/dashboard.js}"></script>
+   	<script th:src="@{application/js/dashboard.js}"></script>
     </div>
     <!-- [ Main Content ] end -->
     

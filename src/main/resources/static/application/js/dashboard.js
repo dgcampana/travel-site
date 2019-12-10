@@ -23,13 +23,16 @@ function getMyExperiences( page ) {
 	    	'Authorization': 'Bearer ' + token
 	    },
 	    beforeSend: function () {
-	    	$("#loader").removeClass("d-none");
 	    },
 	    success: function (data) {
 	    	if( data.code == 200 ) {
 	    		_travels = data.travels;
 	    		_tableExperience =
 	    		dataTableExperiences (_travels);
+	    		
+	    		$("#loanding-experiences").remove();
+	    		$("#container-experiences-table").removeClass("d-none");
+	    		
 	    	}else{
 	    		notify('Lo sentimos no pudimos cargar tus experiencias principales :(', 'danger');
 	    	}
@@ -38,7 +41,6 @@ function getMyExperiences( page ) {
 	    	notify('Error en el servidor contacte a soporte.', 'danger');
 	    },
 	    complete: function() {
-	    	$("#loader").addClass("d-none");
 		}
 	});
 }

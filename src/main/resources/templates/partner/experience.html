@@ -4,6 +4,7 @@
 				xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
 <title>Armonii</title>
+<link layout:fragment="cssSources" rel="stylesheet" th:href="@{application/css/partner/experience.css}">
 </head>
 <body>
 	<!-- [ Main Content ] start -->
@@ -67,14 +68,24 @@
 				                                        <div class="col-md-9 col-sm-12">
 				                                            <div class="tab-content tab-content-less-padding" id="v-pills-tabContent">
 				                                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-				                                                    <div class="form-row">
-					                                                    <div class="form-group col-md-12">
-					                                                        <label for="inputEmail4">T&iacute;tulo:</label>
-					                                                        <input type="email" class="form-control" id="inputTitle" placeholder="">
+				                                                    
+				                                                    <div class="row">
+					                                                    <div class="form-group col-md-8">
+					                                                        <label for="inputTitle">T&iacute;tulo:</label>
+					                                                        <input type="text" class="form-control" id="inputTitle" placeholder="">
+					                                                    </div>
+					                                                    <div class="form-group col-md-2">
+					                                                        <label for="inputDisponibles">Disponibles:</label>
+					                                                        <input type="text" class="form-control" id="inputDisponibles" placeholder="">
+					                                                    </div>
+					                                                    <div class="form-group col-md-2">
+					                                                        <label for="inputReservados">Reservados:</label>
+					                                                        <input type="text" readonly class="form-control" id="inputReservados" placeholder="">
 					                                                    </div>
 					                                                </div>
+					                                                
 					                                                <div class="row">
-					                                                	<div class="col-md-6">
+					                                                	<div class="col-md-4">
 						                                                	<div class="form-group ">
 						                                                        <label for="date-start">Fecha partida:</label>
 						                                                        <input type="text" id="departDate" class="form-control" placeholder="">
@@ -84,7 +95,7 @@
 						                                                        <input type="text" id="returnDate" class="form-control" placeholder="">
 						                                                    </div>
 					                                                	</div>
-					                                                	<div class="col-md-6">
+					                                                	<div class="col-md-8">
 					                                                		<div class="form-group" >
 					                                                            <label for="exampleFormControlTextarea1">Descripci&oacute;n:</label>
 					                                                            <textarea class="form-control" style="height: 130px" id="textareaDescription" ></textarea>
@@ -130,10 +141,32 @@
 				                                                </div>
 				                                                <!-- [ Timeline ] end -->
 				                                                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-				                                                    <p class="mb-0">Eu dolore ea ullamco dolore Lorem id cupidatat excepteur reprehenderit consectetur elit id dolor proident in cupidatat officia. Voluptate excepteur commodo labore nisi cillum duis
-				                                                        aliqua do.
-				                                                        Aliqua amet qui mollit consectetur nulla mollit velit aliqua veniam nisi id do Lorem deserunt amet. Culpa ullamco sit adipisicing labore officia magna elit nisi in aute tempor commodo eiusmod.
-				                                                    </p>
+									                                 <!-- [ single-lightbox-cover ] start -->
+				                                                    <h5>Portada</h5>
+								                                    <div class="row text-center">
+						                                                <div class="col-xl-3 col-lg-3 col-sm-4 col-xs-12">
+						                                                    <a href="images/light-box/l1.jpg" data-toggle="lightbox" data-title="Datta Image 1" data-footer="Datta Image 1"><img src="images/light-box/sl1.jpg" class="img-fluid m-b-10" alt=""></a>
+						                                                </div>
+						                                            </div>
+									                                <!-- [ single-lightbox-cover] end -->
+									                                <!-- [ single-lightbox-slide ] start -->
+				                                                    <h5>Slide</h5>
+								                                    <div class="row text-center">
+						                                                <div class="col-xl-3 col-lg-3 col-sm-4 col-xs-12">
+						                                                    <a href="images/light-box/l1.jpg" data-toggle="lightbox" data-title="Datta Image 1" data-footer="Datta Image 1"><img src="images/light-box/sl1.jpg" class="img-fluid m-b-10" alt=""></a>
+						                                                </div>
+						                                                <div class="col-xl-3 col-lg-3 col-sm-4 col-xs-12">
+						                                                    <a href="images/light-box/l2.jpg" data-toggle="lightbox" data-title="Datta Image 2" data-footer="Datta Image 2"><img src="images/light-box/sl2.jpg" class="img-fluid m-b-10" alt=""></a>
+						                                                </div>
+						                                                <div class="col-xl-3 col-lg-3 col-sm-4 col-xs-12">
+						                                                    <a href="images/light-box/l3.jpg" data-toggle="lightbox" data-title="Datta Image 3" data-footer="Datta Image 3"><img src="images/light-box/sl3.jpg" class="img-fluid m-b-10" alt=""></a>
+						                                                </div>
+						                                                <div class="col-xl-3 col-lg-3 col-sm-4 col-xs-12">
+						                                                    <a href="images/light-box/l4.jpg" data-toggle="lightbox" data-title="Datta Image 4" data-footer="Datta Image 4"><img src="images/light-box/sl4.jpg" class="img-fluid m-b-10" alt=""></a>
+						                                                </div>
+						                                                
+						                                            </div>
+									                                <!-- [ single-lightbox-slide] end -->
 				                                                </div>
 				                                            </div>
 				                                        </div>
@@ -161,8 +194,12 @@
 	   	<!-- material datetimepicker Js -->
 	    <script src="http://momentjs.com/downloads/moment-with-locales.min.js"></script>
 	    <script th:src="@{plugins/material-datetimepicker/js/bootstrap-material-datetimepicker.js}"></script>
+	    <!-- ekko-lightbox Js -->
+	    <script th:src="@{plugins/ekko-lightbox/js/ekko-lightbox.min.js}"></script>
+	    <script th:src="@{plugins/lightbox2-master/js/lightbox.min.js}"></script>
+	    <script th:src="@{js/pages/ac-lightbox.js}"></script>
 	   	<!-- experiences js -->
-	   	<script th:src="@{application/partner/experience.js}"></script>
+	   	<script th:src="@{application/js/partner/experience.js}"></script>
     </div>
 </body>
 </html>
