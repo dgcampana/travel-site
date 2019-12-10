@@ -11231,6 +11231,12 @@ div.code-toolbar > .toolbar span:hover {
 	background: #000 !important;
 }
 
+@media (max-width:575px){
+	.hidden-xs-down {
+		display:none!important
+	}
+}
+
 
 
 
