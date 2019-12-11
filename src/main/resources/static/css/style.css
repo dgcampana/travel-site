@@ -68,7 +68,7 @@ File: style.css
 
 
 body {
-  font-family: "Montserrat-Light";
+  font-family: "Montserrat-Regular";
   font-size: 14px;
   color: #888;
   font-weight: 400;
@@ -8441,13 +8441,16 @@ a.btn-theme.active {
 }
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
-  background-color: #04a9f5;
-  border-color: #04a9f5;
+  background-color: #000;
+  border-color: #000;
+  opacity:0.7;
+   filter:alpha(opacity=70);
 }
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
   background-color: #0386c3;
   border-color: #037eb6;
+  
 }
 
 .btn-secondary {

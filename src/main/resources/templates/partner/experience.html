@@ -4,7 +4,7 @@
 				xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
 <title>Armonii</title>
-<link layout:fragment="cssSources" rel="stylesheet" th:href="@{application/css/partner/experience.css}">
+<link rel="stylesheet" th:href="@{application/css/partner/experience.css}">
 </head>
 <body>
 	<!-- [ Main Content ] start -->
@@ -102,70 +102,65 @@
 					                                                        </div>
 					                                                	</div>
 					                                                </div>
+					                                                <div class="row">
+					                                                	<div class="col-md-12">
+					                                                		<button id="btnSubmit" type="button" class="btn-sm btn-primary shadow-2 btn-square float-right" disabled>Guardar</button>
+					                                                	</div>
+					                                                </div>
 				                                                </div>
 				                                                <!-- [ Reservaciones ] start -->
 				                                                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-				                                                    <div class="table-responsive">
-						                                                <table id="reservation-table" class="display table nowrap table-hover table-bordered" style="width: 100%">
-						                                                    <thead>
-						                                                        <tr>
-						                                                        	<th>Id reservaci&oacute;n</th>
-						                                                            <th>Nombre</th>
-						                                                            <th>Estatus</th>
-						                                                        </tr>
-						                                                    </thead>
-						                                                    <tbody>
-						                                                    </tbody>
-						                                                </table>
-						                                            </div>
+				                                                    <div id="table-reservaciones-row" class="row">
+				                                                    	<div class="col-md-12">
+					                                                    	<div class="table-responsive">
+								                                                <table id="table-reservaciones" class="display table nowrap table-hover table-bordered" style="width: 100%">
+								                                                    <thead>
+								                                                        <tr>
+								                                                        	<th>Id reservaci&oacute;n</th>
+								                                                            <th>Nombre</th>
+								                                                            <th>Estatus</th>
+								                                                        </tr>
+								                                                    </thead>
+								                                                    <tbody>
+								                                                    </tbody>
+								                                                </table>
+								                                            </div>
+				                                                    	</div>
+				                                                    </div>
 				                                                </div>
 				                                                <!-- [ Reservaciones ] end -->
 				                                                <!-- [ Timeline ] start -->
 				                                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-														              <ul class="timeline">
-														                  <li class="timeline-item bg-white rounded ml-3 pl-4 pt-2 pb-1 shadow">
-														                      <div class="timeline-arrow"></div>
-														                      <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>07:30 a.m.</span>
-														                      <p class="text-small mt-2 font-weight-light">
-														                      	Visita y entrada a la Zona Arqueológica de Palenque (recorrido guiado)
-														                      </p>
-														                  </li>
-														                  <li class="timeline-item bg-white rounded ml-3 pl-4 pt-2 pb-1 shadow">
-														                      <div class="timeline-arrow"></div>
-														                      <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>10:30 a.m.</span>
-														                      <p class="text-small mt-2 font-weight-light">
-														                      	Visita y entrada a las cascadas de Roberto Barrios.
-														                      </p>
-														                  </li>
-														              </ul>
+														        	<div class="row">
+														        		<div class="col-sm-12">
+														        			<button id="btnSubmit" type="button" class="btn-sm btn-primary shadow-2 btn-square float-right">Cambiar</button>
+														        		</div>
+														        	</div>	
+														        	<div class="row">
+														        		<div class="col-sm-12">
+														        			 <ul class="timeline">
+																                  <li class="timeline-item bg-white rounded ml-3 pl-4 pt-2 pb-1 shadow">
+																                      <div class="timeline-arrow"></div>
+																                      <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>07:30 a.m.</span>
+																                      <p class="text-small mt-2 font-weight-light">
+																                      	Visita y entrada a la Zona Arqueológica de Palenque (recorrido guiado)
+																                      </p>
+																                  </li>
+																                  <li class="timeline-item bg-white rounded ml-3 pl-4 pt-2 pb-1 shadow">
+																                      <div class="timeline-arrow"></div>
+																                      <span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>10:30 a.m.</span>
+																                      <p class="text-small mt-2 font-weight-light">
+																                      	Visita y entrada a las cascadas de Roberto Barrios.
+																                      </p>
+																                  </li>
+																              </ul>
+														        		</div>
+														        	</div>
 				                                                </div>
 				                                                <!-- [ Timeline ] end -->
 				                                                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
 									                                 <!-- [ single-lightbox-cover ] start -->
-				                                                    <h5>Portada</h5>
-								                                    <div class="row text-center">
-						                                                <div class="col-xl-3 col-lg-3 col-sm-4 col-xs-12">
-						                                                    <a href="images/light-box/l1.jpg" data-toggle="lightbox" data-title="Datta Image 1" data-footer="Datta Image 1"><img src="images/light-box/sl1.jpg" class="img-fluid m-b-10" alt=""></a>
-						                                                </div>
-						                                            </div>
-									                                <!-- [ single-lightbox-cover] end -->
-									                                <!-- [ single-lightbox-slide ] start -->
-				                                                    <h5>Slide</h5>
-								                                    <div class="row text-center">
-						                                                <div class="col-xl-3 col-lg-3 col-sm-4 col-xs-12">
-						                                                    <a href="images/light-box/l1.jpg" data-toggle="lightbox" data-title="Datta Image 1" data-footer="Datta Image 1"><img src="images/light-box/sl1.jpg" class="img-fluid m-b-10" alt=""></a>
-						                                                </div>
-						                                                <div class="col-xl-3 col-lg-3 col-sm-4 col-xs-12">
-						                                                    <a href="images/light-box/l2.jpg" data-toggle="lightbox" data-title="Datta Image 2" data-footer="Datta Image 2"><img src="images/light-box/sl2.jpg" class="img-fluid m-b-10" alt=""></a>
-						                                                </div>
-						                                                <div class="col-xl-3 col-lg-3 col-sm-4 col-xs-12">
-						                                                    <a href="images/light-box/l3.jpg" data-toggle="lightbox" data-title="Datta Image 3" data-footer="Datta Image 3"><img src="images/light-box/sl3.jpg" class="img-fluid m-b-10" alt=""></a>
-						                                                </div>
-						                                                <div class="col-xl-3 col-lg-3 col-sm-4 col-xs-12">
-						                                                    <a href="images/light-box/l4.jpg" data-toggle="lightbox" data-title="Datta Image 4" data-footer="Datta Image 4"><img src="images/light-box/sl4.jpg" class="img-fluid m-b-10" alt=""></a>
-						                                                </div>
-						                                                
-						                                            </div>
+				                                                   
 									                                <!-- [ single-lightbox-slide] end -->
 				                                                </div>
 				                                            </div>

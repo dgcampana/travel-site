@@ -8,9 +8,15 @@ $( document ).ready(function() {
 
 //Pinta la tabla del experiencias en el dashboard
 function dataTableReservations () {
-	var tableExperience = $('#reservation-table').DataTable( {
+	var tableExperience = $('#table-reservaciones').DataTable( {
 		"bLengthChange": false,
 		"searching": false, 
+		"language": {
+			"emptyTable": "No hay reservaci&oacute;nes registradas",
+			"info":           "Mostrando _START_ de _END_ de _TOTAL_ reservaciones",
+		    "infoEmpty":      "",
+		    "paginate": __paginate
+		}
 		
 	});
 	return tableExperience;

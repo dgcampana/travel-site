@@ -27,3 +27,13 @@ function getAgencyName() {
 		}
 	});
 }
+
+/**
+ * Variables Globlales
+ **/
+var __paginate = {
+    "first":      "Primero",
+    "last":       "Último",
+    "next":       "Siguiente",
+    "previous":   "Anterior"
+}

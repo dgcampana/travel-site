@@ -50,6 +50,12 @@ function dataTableExperiences (data) {
 	var tableExperience = $('#experiences-table').DataTable( {
 		"bLengthChange": false,
 		"searching": false, 
+		"language": {
+			"emptyTable": "No hay experiencias registradas",
+			"info":       "Mostrando _START_ de _END_ de _TOTAL_ experiencias",
+		    "infoEmpty":  "",
+		    "paginate": __paginate
+		},
 		data: _travels,
 	    columns: [
 	        { data: 'title' },
