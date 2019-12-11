@@ -7575,6 +7575,10 @@ pre[class*=language-]:after, pre[class*=language-]:before {
 /**  =====================
       Form Componant css start
 ==========================  **/
+.form-control {
+  border-radius: 0px !important;
+}
+
 .custom-select,
 .form-control {
   background: #f4f7fa;
