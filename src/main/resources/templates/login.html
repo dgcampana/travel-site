@@ -30,8 +30,14 @@
 		.nav-link.active{
 			color: #FFF !important;
 		}
+		
+		.nav-tabs .nav-link {
+			border-top-left-radius: 0px;
+        	border-top-right-radius: 0px;
+		}
+		
 		.tab-content{
-			padding: 35px 0px !important;
+			padding: 35px 0px 0px !important;
 			box-shadow: none !important;
 		}
 		
@@ -98,7 +104,7 @@
 							            <label for="checkbox-fill-a1" class="cr"> Recuerdame</label>
 							        </div>
 							    </div>
-							    <button id="btnSubmit" type="button" class="btn btn-primary shadow-2 mb-4 btn-square">Iniciar sesión</button>
+							    <button id="btnSubmit" type="button" class="btn btn-primary shadow-2 mb-4 btn-square">Entrar</button>
 							</form>
                         </div>
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -120,16 +126,16 @@
 							        </div>
 							    </div>
 							    <div class="input-group mb-3">
-							        <input id="name" name="name" type="name" class="form-control" placeholder="Nombre">
+							        <input id="name" name="name" type="name" class="form-control" placeholder="Nombre*">
 							    </div>
 							    <div class="input-group mb-3">
-							        <input id="email" name="email" type="email" class="form-control" placeholder="Correo electronicó">
+							        <input id="email" name="email" type="email" class="form-control" placeholder="Correo electronicó*">
 							    </div>
 							    <div class="input-group mb-4">
-							        <input id="password" name="password" type="password" class="form-control" placeholder="Contraseña">
+							        <input id="password" name="password" type="password" class="form-control" placeholder="Contraseña*">
 							    </div>
 							    <div class="input-group mb-4">
-							        <input id="confirmPassword" name="confirmPassword" type="password" class="form-control" placeholder= "Confirmar contraseña">
+							        <input id="confirmPassword" name="confirmPassword" type="password" class="form-control" placeholder= "Confirmar contraseña*">
 							    </div>
 							    
 							    <button id="btnSubmitRegister" type="button" class="btn btn-primary shadow-2 mb-4 btn-square">Registrar</button>
