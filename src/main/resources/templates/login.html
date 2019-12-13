@@ -25,7 +25,23 @@
     <link rel="stylesheet" th:href="@{plugins/animation/css/animate.min.css}">
     <!-- vendor css -->
     <link rel="stylesheet" th:href="@{css/style.css}">
-
+	
+	<style type="text/css">
+		.nav-link.active{
+			color: #FFF !important;
+		}
+		.tab-content{
+			padding: 35px 0px !important;
+			box-shadow: none !important;
+		}
+		
+		
+		@media only screen and (max-width: 576px) { 
+			.mobile-top {
+			    align-items: stretch !important;
+			}
+		}
+	</style>
 </head>
 
 <body style="background-color: black">
@@ -34,7 +50,7 @@
           <div class="loader-fill"></div>
       </div>
   </div>
-  <div class="auth-wrapper aut-bg-img">
+  <div class="auth-wrapper aut-bg-img mobile-top">
         <div class="auth-content">
             <div class="card">
                 <div class="card-body text-center">
@@ -42,40 +58,84 @@
                         <i class="feather icon-unlock auth-icon"></i>
                     </div>
                     <h3 class="mb-4">Armonii</h3>
-                    
-                    <form id="loginForm" th:action="@{/login}" method="post">
-	                    <div th:if="${param.error}">
-		                    <div class="alert alert-danger">
-		                        <span th:text="${error}"></span>
-		                    </div>
-		                </div>
-		                <div id="ajaxError" class="d-none">
-		                	<div class="alert alert-danger">
-		                	<span id="ajaxErrorMessage"></span>
-		                </div>
-		                </div>
-		                
-		                <div th:if="${ accessDenied == true }">
-		                    <div class="alert alert-danger">
-		                        <span th:text="${accessDeniedMsg}"></span>
-		                    </div>
-		                </div>
-	                    <div class="input-group mb-3">
-	                        <input id="username" name="username" type="email" class="form-control" placeholder="Correo electronicó">
-	                    </div>
-	                    <div class="input-group mb-4">
-	                        <input id="password" name="password" type="password" class="form-control" placeholder="Contraseña">
-	                    </div>
-	                    <div class="form-group text-left">
-	                        <div class="checkbox checkbox-fill d-inline">
-	                            <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-a1" checked="">
-	                            <label for="checkbox-fill-a1" class="cr"> Recuerdame</label>
-	                        </div>
-	                    </div>
-	                    <button id="btnSubmit" type="button" class="btn btn-primary shadow-2 mb-4 btn-square">Iniciar sesión</button>
-                    </form>
-                    <p class="mb-2 text-muted">olvidaste tu contraseña? <a href="/">Recuperalá</a></p>
-                    
+                    <hr>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Inicio de sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Registro</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active " id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <form id="loginForm" th:action="@{/login}" method="post">
+							    <div th:if="${param.error}">
+							        <div class="alert alert-danger">
+							            <span th:text="${error}"></span>
+							        </div>
+							    </div>
+							    <div id="ajaxError" class="d-none">
+							        <div class="alert alert-danger">
+							        <span id="ajaxErrorMessage"></span>
+							    </div>
+							    </div>
+							    
+							    <div th:if="${ accessDenied == true }">
+							        <div class="alert alert-danger">
+							            <span th:text="${accessDeniedMsg}"></span>
+							        </div>
+							    </div>
+							    <div class="input-group mb-3">
+							        <input id="username" name="username" type="email" class="form-control" placeholder="Correo electronicó">
+							    </div>
+							    <div class="input-group mb-4">
+							        <input id="password" name="password" type="password" class="form-control" placeholder="Contraseña">
+							    </div>
+							    <div class="form-group text-left">
+							        <div class="checkbox checkbox-fill d-inline">
+							            <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-a1" checked="">
+							            <label for="checkbox-fill-a1" class="cr"> Recuerdame</label>
+							        </div>
+							    </div>
+							    <button id="btnSubmit" type="button" class="btn btn-primary shadow-2 mb-4 btn-square">Iniciar sesión</button>
+							</form>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <form id="registerForm" th:action="@{/register}" method="post">
+							    <div th:if="${param.error}">
+							        <div class="alert alert-danger">
+							            <span th:text="${error}"></span>
+							        </div>
+							    </div>
+							    <div id="ajaxError" class="d-none">
+							        <div class="alert alert-danger">
+							        <span id="ajaxErrorMessage"></span>
+							    </div>
+							    </div>
+							    
+							    <div th:if="${ accessDenied == true }">
+							        <div class="alert alert-danger">
+							            <span th:text="${accessDeniedMsg}"></span>
+							        </div>
+							    </div>
+							    <div class="input-group mb-3">
+							        <input id="name" name="name" type="name" class="form-control" placeholder="Nombre">
+							    </div>
+							    <div class="input-group mb-3">
+							        <input id="email" name="email" type="email" class="form-control" placeholder="Correo electronicó">
+							    </div>
+							    <div class="input-group mb-4">
+							        <input id="password" name="password" type="password" class="form-control" placeholder="Contraseña">
+							    </div>
+							    <div class="input-group mb-4">
+							        <input id="confirmPassword" name="confirmPassword" type="password" class="form-control" placeholder= "Confirmar contraseña">
+							    </div>
+							    
+							    <button id="btnSubmitRegister" type="button" class="btn btn-primary shadow-2 mb-4 btn-square">Registrar</button>
+							</form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
