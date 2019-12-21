@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 
 import com.kmp.site.travelweb.application.dto.login.RequestUserCheck;
 import com.kmp.site.travelweb.application.dto.login.ResponseUserCheck;
-import com.kmp.site.travelweb.domain.client.LoginClient;
+import com.kmp.site.travelweb.domain.client.UserClient;
 
 @Service
 public class LoginUserDetailsService implements UserDetailsService {
@@ -28,7 +28,7 @@ public class LoginUserDetailsService implements UserDetailsService {
 	private String secureCode;
 	
 	@Autowired
-	private LoginClient loginClient;
+	private UserClient loginClient;
 
 
 	@Override

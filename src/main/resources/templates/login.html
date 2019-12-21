@@ -67,14 +67,14 @@
                     <hr>
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Inicio de sesión</a>
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#loginTab" role="tab" aria-controls="home" aria-selected="true">Inicio de sesión</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Registro</a>
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#registerTab" role="tab" aria-controls="profile" aria-selected="false">Registro</a>
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active " id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="tab-pane fade show active " id="loginTab" role="tabpanel" aria-labelledby="home-tab">
                             <form id="loginForm" th:action="@{/login}" method="post">
 							    <div th:if="${param.error}">
 							        <div class="alert alert-danger">
@@ -98,47 +98,33 @@
 							    <div class="input-group mb-4">
 							        <input id="password" name="password" type="password" class="form-control" placeholder="Contraseña">
 							    </div>
-							    <div class="form-group text-left">
-							        <div class="checkbox checkbox-fill d-inline">
-							            <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-a1" checked="">
-							            <label for="checkbox-fill-a1" class="cr"> Recuerdame</label>
-							        </div>
-							    </div>
-							    <button id="btnSubmit" type="button" class="btn btn-primary shadow-2 mb-4 btn-square">Entrar</button>
+							    <button id="btnSubmit" type="button" class="btn btn-primary shadow-2 mb-4 btn-square wid-150">Entrar</button>
 							</form>
                         </div>
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <form id="registerForm" th:action="@{/register}" method="post">
-							    <div th:if="${param.error}">
-							        <div class="alert alert-danger">
-							            <span th:text="${error}"></span>
+                        <div class="tab-pane fade" id="registerTab" role="tabpanel" aria-labelledby="profile-tab">
+                            <form id="registerForm">
+							    <div class="form-group mb-3">
+							        <input id="name" name="validation-required" type="text" class="form-control" placeholder="Nombre*">
+							    </div>
+							     <div class="form-group mb-4">
+							        <input id="lastname" name="validation-required-2" type="text" class="form-control" placeholder= "Apellido">
+							    </div>
+							    <div class="form-group mb-3 ">
+							        <input id="email" name="validation-email" type="text" class="form-control" placeholder="Correo electronicó*">
+							    </div>
+							    <div class="form-group mb-4 ">
+							        <input id="passwordRegister" name="validation-password" type="password" class="form-control" placeholder="Contraseña*">
+							    </div>
+							    <div class="form-group mb-4 ">
+							        <input id="confirmPassword" name="validation-password-confirmation" type="password" class="form-control" placeholder= "Confirmar contraseña*">
+							    </div>
+							    <div class="form-group text-left">
+							        <div class="checkbox checkbox-fill d-inline">
+							            <input type="checkbox" name="validation-terms" id="checkTerms" >
+							            <label for="checkTerms" class="cr"> Acepto términos y condiciones</label>
 							        </div>
 							    </div>
-							    <div id="ajaxError" class="d-none">
-							        <div class="alert alert-danger">
-							        <span id="ajaxErrorMessage"></span>
-							    </div>
-							    </div>
-							    
-							    <div th:if="${ accessDenied == true }">
-							        <div class="alert alert-danger">
-							            <span th:text="${accessDeniedMsg}"></span>
-							        </div>
-							    </div>
-							    <div class="input-group mb-3">
-							        <input id="name" name="name" type="name" class="form-control" placeholder="Nombre*">
-							    </div>
-							    <div class="input-group mb-3">
-							        <input id="email" name="email" type="email" class="form-control" placeholder="Correo electronicó*">
-							    </div>
-							    <div class="input-group mb-4">
-							        <input id="password" name="password" type="password" class="form-control" placeholder="Contraseña*">
-							    </div>
-							    <div class="input-group mb-4">
-							        <input id="confirmPassword" name="confirmPassword" type="password" class="form-control" placeholder= "Confirmar contraseña*">
-							    </div>
-							    
-							    <button id="btnSubmitRegister" type="button" class="btn btn-primary shadow-2 mb-4 btn-square">Registrar</button>
+							    <button id="btnSubmitRegister" type="button" onclick="clickRegister()" class="btn btn-primary shadow-2 mb-4 wid-150 btn-square ">Registrar</button>
 							</form>
                         </div>
                     </div>
@@ -155,9 +141,15 @@
 	</script> 
     
     <script th:src="@{js/vendor-all.min.js}"></script>
-    <script th:src="@{application/js/login/login.js}" type="text/javascript"></script>
     <script th:src="@{plugins/bootstrap/js/bootstrap.min.js}"></script>
     <script th:src="@{js/pcoded.min.js}"></script>
+    <!-- Notification Js -->
+	<script th:src="@{plugins/notification/js/bootstrap-growl.min.js}"></script>
+	<!-- jquery-validation Js -->
+    <script th:src="@{plugins/jquery-validation/js/jquery.validate.min.js}"></script>
+	<!-- custom Js -->
+    <script th:src="@{application/js/login/login.js}" type="text/javascript"></script>
+    <script th:src="@{application/js/login/register.js}" type="text/javascript"></script>
     
 
 </body>
