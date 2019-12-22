@@ -37,7 +37,7 @@
 		}
 		
 		.tab-content{
-			padding: 35px 0px 0px !important;
+			padding: 5px 0px 0px !important;
 			box-shadow: none !important;
 		}
 		
@@ -61,10 +61,8 @@
             <div class="card">
                 <div class="card-body text-center">
                     <div class="mb-4">
-                        <i class="feather icon-unlock auth-icon"></i>
+                        <img alt="" class="img-fluid p-30" th:src="@{images/lets/Black on Transparent.png}">
                     </div>
-                    <h3 class="mb-4">Armonii</h3>
-                    <hr>
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="home-tab" data-toggle="tab" href="#loginTab" role="tab" aria-controls="home" aria-selected="true">Inicio de sesión</a>
@@ -73,6 +71,7 @@
                             <a class="nav-link" id="profile-tab" data-toggle="tab" href="#registerTab" role="tab" aria-controls="profile" aria-selected="false">Registro</a>
                         </li>
                     </ul>
+                    <hr>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active " id="loginTab" role="tabpanel" aria-labelledby="home-tab">
                             <form id="loginForm" th:action="@{/login}" method="post">
@@ -83,39 +82,46 @@
 							    </div>
 							    <div id="ajaxError" class="d-none">
 							        <div class="alert alert-danger">
-							        <span id="ajaxErrorMessage"></span>
+							        	<span id="ajaxErrorMessage"></span>
+							    	</div>
 							    </div>
-							    </div>
-							    
 							    <div th:if="${ accessDenied == true }">
 							        <div class="alert alert-danger">
 							            <span th:text="${accessDeniedMsg}"></span>
 							        </div>
 							    </div>
-							    <div class="input-group mb-3">
+							    <div class="form-group mb-3">
 							        <input id="username" name="username" type="email" class="form-control" placeholder="Correo electronicó">
 							    </div>
-							    <div class="input-group mb-4">
+							    <div class="form-group mb-4">
 							        <input id="password" name="password" type="password" class="form-control" placeholder="Contraseña">
 							    </div>
 							    <button id="btnSubmit" type="button" class="btn btn-primary shadow-2 mb-4 btn-square wid-150">Entrar</button>
 							</form>
                         </div>
                         <div class="tab-pane fade" id="registerTab" role="tabpanel" aria-labelledby="profile-tab">
-                            <form id="registerForm">
+                        	<div id="errorRegister" class="alert alert-danger d-none">
+					        	<span id="errorText"></span>
+					    	</div>
+					    	<div id="successRegister" class="alert alert-success d-none">
+					        	<span id="successText"></span>
+					    	</div>
+                            <form id="registerFormStep1">
 							    <div class="form-group mb-3">
 							        <input id="name" name="validation-required" type="text" class="form-control" placeholder="Nombre*">
 							    </div>
-							     <div class="form-group mb-4">
-							        <input id="lastname" name="validation-required-2" type="text" class="form-control" placeholder= "Apellido">
+							     <div class="form-group mb-3">
+							        <input id="lastname" name="validation-required-2" type="text" class="form-control" placeholder= "Apellido*">
 							    </div>
-							    <div class="form-group mb-3 ">
+							    <div class="form-group mb-4 ">
 							        <input id="email" name="validation-email" type="text" class="form-control" placeholder="Correo electronicó*">
 							    </div>
-							    <div class="form-group mb-4 ">
+							</form>
+							<form id="registerFormStep2" class="d-none">
+							    <div class="form-group mb-3 ">
 							        <input id="passwordRegister" name="validation-password" type="password" class="form-control" placeholder="Contraseña*">
 							    </div>
-							    <div class="form-group mb-4 ">
+							    <div class="form-group mb-3 ">
 							        <input id="confirmPassword" name="validation-password-confirmation" type="password" class="form-control" placeholder= "Confirmar contraseña*">
 							    </div>
 							    <div class="form-group text-left">
@@ -124,8 +130,20 @@
 							            <label for="checkTerms" class="cr"> Acepto términos y condiciones</label>
 							        </div>
 							    </div>
-							    <button id="btnSubmitRegister" type="button" onclick="clickRegister()" class="btn btn-primary shadow-2 mb-4 wid-150 btn-square ">Registrar</button>
-							</form>
+						    </form>
+						    <div class="row" id="rowButtonStep1">
+						    	<div class="col-md-12">
+ 	   							    <button id="btnSubmitNext" type="button" onclick="clickNext()" class="btn btn-primary shadow-2 mb-4 wid-150 btn-square ">Siguiente</button>
+						    	</div>
+						    </div>
+						    <div class="row d-none" id="rowButtonStep2">
+						    	<div class="col-4">
+						    		<button id="btnSubmitBack" type="button" onclick="clicBack()" class="btn btn-primary shadow-2 mb-4 btn-square ">Atras</button>
+						    	</div>
+						    	<div class="col-8">
+   								    <button id="btnSubmitRegister" type="button" onclick="clickRegister()" class="btn btn-primary shadow-2 mb-4 btn-square w-100">Registrar</button>
+						    	</div>
+						    </div>
                         </div>
                     </div>
                 </div>

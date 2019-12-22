@@ -1,13 +1,39 @@
 
 $( document ).ready(function() {
-	validFormRegister();
+	validFormRegisterStep1();
+	validFormRegisterStep2();
 });
 
 
 function clickRegister() {
-	if($("#registerForm").valid()){
+	if( $("#registerFormStep1").valid() &&
+		$("#registerFormStep2").valid()	){
 		registerUser();
+	}else{
+		$("#registerFormStep2").valid();
 	} 
+	
+}
+
+function clickNext() {
+	var form = $("#registerFormStep1");
+	
+	if( form.valid()){
+		form.addClass("d-none");
+		$("#registerFormStep2").removeClass("d-none");
+		$("#rowButtonStep2").removeClass("d-none");
+		
+		$("#rowButtonStep1").addClass("d-none");
+		
+	}
+}
+
+function clicBack() {
+	$("#registerFormStep1").removeClass("d-none");
+	$("#rowButtonStep1").removeClass("d-none");
+	
+	$("#registerFormStep2").addClass("d-none");
+	$("#rowButtonStep2").addClass("d-none");
 }
 
 function registerUser() {
@@ -37,14 +63,25 @@ function registerUser() {
 	    },
 	    success: function (data) {
 	    	if( data.code == 200 ){
-	    		notify(data.message, 'success');
+	    		$("#successRegister").removeClass("d-none");
+	    		$("#successText").text(data.message);
+	    		
+	    		setTimeout(function(){
+	    			window.location.replace("/");
+	    		}, 3000);
 	    	}else {
-	    		notify(data.message, 'danger');
+	    		$("#errorRegister").removeClass("d-none");
+	    		$("#errorText").text(data.message);
 	    	}
 	    },
 	    error: function (e) {
-	    	notify(e.responseJSON.message, 'danger');
+	    	$("#errorRegister").removeClass("d-none");
+    		$("#errorText").text(e.responseJSON.message);
 	    	$("#loader").addClass("d-none");
+	    	
+	    	setTimeout(function(){
+    			$("#errorRegister").addClass("d-none");
+    		}, 3000);
 	    },
 	    complete: function() {
 	    	$("#loader").addClass("d-none");
@@ -52,27 +89,15 @@ function registerUser() {
 	});
 }
 
-
-
-function validFormRegister() {
+function validFormRegisterStep1() {
     // [ Initialize validation ] start
-    $('#registerForm').validate({
+    $('#registerFormStep1').validate({
         ignore: '.ignore, .select2-input',
         focusInvalid: false,
         rules: {
-            'validation-email': {
+        	'validation-email': {
                 required: true,
                 email: true
-            },
-            'validation-password': {
-                required: true,
-                minlength: 6,
-                maxlength: 20
-            },
-            'validation-password-confirmation': {
-                required: true,
-                minlength: 6,
-                equalTo: 'input[name="validation-password"]'
             },
             'validation-required': {
                 required: true
@@ -89,12 +114,59 @@ function validFormRegister() {
             if ($parent.find('.jquery-validation-error').length) {
                 return;
             }
-
             $parent.append(
                 error.addClass('jquery-validation-error small form-text invalid-feedback')
             );
         },
-        highlight: function(element) {
+        highlight: function highlight(element) {
+            var $el = $(element);
+            var $parent = $el.parents('.form-group');
+
+            $el.addClass('is-invalid');
+
+            // Select2 and Tagsinput
+            if ($el.hasClass('select2-hidden-accessible') || $el.attr('data-role') === 'tagsinput') {
+                $el.parent().addClass('is-invalid');
+            }
+        },
+        unhighlight: function(element) {
+            $(element).parents('.form-group').find('.is-invalid').removeClass('is-invalid');
+        }
+    });
+}
+
+
+
+function validFormRegisterStep2() {
+    // [ Initialize validation ] start
+    $('#registerFormStep2').validate({
+        ignore: '.ignore, .select2-input',
+        focusInvalid: false,
+        rules: {
+            'validation-password': {
+                required: true,
+                minlength: 6,
+                maxlength: 20
+            },
+            'validation-password-confirmation': {
+                required: true,
+                minlength: 6,
+                equalTo: 'input[name="validation-password"]'
+            }
+        },
+        // Errors //
+        errorPlacement: function errorPlacement(error, element) {
+            var $parent = $(element).parents('.form-group');
+
+            // Do not duplicate errors
+            if ($parent.find('.jquery-validation-error').length) {
+                return;
+            }
+            $parent.append(
+                error.addClass('jquery-validation-error small form-text invalid-feedback')
+            );
+        },
+        highlight: function highlight(element) {
             var $el = $(element);
             var $parent = $el.parents('.form-group');
 
