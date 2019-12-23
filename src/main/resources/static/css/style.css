@@ -9023,8 +9023,8 @@ a.btn-theme.active {
 /* pagination */
 .page-item.active .page-link {
   color: #fff;
-  background-color: #04a9f5;
-  border-color: #04a9f5;
+  background-color: #000;
+  border-color: #000;
 }
 
 /**====== Breadcrumbs & Pagination css end ======**/
@@ -11259,6 +11259,13 @@ div.code-toolbar > .toolbar span:hover {
 
 .form-control {
     background: #FFF !important;
+}
+
+.trash-image {
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #FFF;
+	width: 25px;
+	margin-left: 5px;
 }
 
 

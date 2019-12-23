@@ -84,7 +84,8 @@ function dataTableExperiences (data) {
 	});
 	return tableExperience;
 }
-
+//para recibir del servicio y poner una grafica de porcentaje reservado
+//<div data-label="30%" class="radial-bar radial-bar-30 radial-bar-xs"></div>
 
    
 
