@@ -11257,4 +11257,8 @@ div.code-toolbar > .toolbar span:hover {
 	width: 120px;
 }
 
+.form-control {
+    background: #FFF !important;
+}
+
 
