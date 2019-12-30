@@ -598,7 +598,7 @@ h3.slide_typo {
 
 /*General links color*/
 a {
-  color: #024B0F;
+  color: #fc5b62;
   text-decoration: none;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -640,7 +640,7 @@ a.btn_1,
 }
 a.btn_1:hover,
 .btn_1:hover {
-  background: #024B0F;
+  background: #0054a6;
   color: #fff;
 }
 a.btn_1.full-width,
@@ -1324,7 +1324,7 @@ main {
 
 /* Footer */
 footer {
-  background-color: #000;
+  background-color: #121921;
   color: #fbfbfb;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -4360,8 +4360,7 @@ ul.hotel_facilities li img {
 
 /*-------- 2.5 Login/register --------*/
 #login_bg, #register_bg {
-  /*background: url(../img/hero_in_bg_3.jpg) center center no-repeat fixed;*/
-  background-color: #000;
+  background: url(../img/hero_in_bg_3.jpg) center center no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -4371,7 +4370,7 @@ ul.hotel_facilities li img {
 }
 
 #register_bg {
-  /*background: url(../img/hero_in_bg_2.jpg) center center no-repeat fixed;*/
+  background: url(../img/hero_in_bg_2.jpg) center center no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -5112,16 +5111,8 @@ span.infobox_rate {
   font-weight: 500;
 }
 
-<<<<<<< HEAD
 .table.cart-list.table-striped tbody tr:nth-of-type(odd) {
   background-color: rgba(0, 0, 0, 0.025);
-=======
-/* pagination */
-.page-item.active .page-link {
-  color: #fff;
-  background-color: #000;
-  border-color: #000;
->>>>>>> dfb8605b8a1647f04fc8123c423a8ed95b60923e
 }
 
 @media (max-width: 991px) {
@@ -7393,4 +7384,3 @@ a.social_bt.google:before {
     display: none;
   }
 }
-
