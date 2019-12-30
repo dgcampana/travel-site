@@ -5112,8 +5112,16 @@ span.infobox_rate {
   font-weight: 500;
 }
 
+<<<<<<< HEAD
 .table.cart-list.table-striped tbody tr:nth-of-type(odd) {
   background-color: rgba(0, 0, 0, 0.025);
+=======
+/* pagination */
+.page-item.active .page-link {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+>>>>>>> dfb8605b8a1647f04fc8123c423a8ed95b60923e
 }
 
 @media (max-width: 991px) {
@@ -7385,3 +7393,4 @@ a.social_bt.google:before {
     display: none;
   }
 }
+
