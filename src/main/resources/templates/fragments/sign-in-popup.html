@@ -1,0 +1,44 @@
+<div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide" th:fragment="sign-in-popup" xmlns:th="http://www.w3.org/1999/xhtml">
+<div class="small-dialog-header">
+	<h3>Sign In</h3>
+	</div>
+	<form>
+		<div class="sign-in-wrapper">
+			<a href="#0" class="social_bt facebook">Login con Facebook</a>
+			<a href="#0" class="social_bt google">Login con Google</a>
+			<div class="divider"><span>O</span></div>
+			<div class="form-group">
+				<label>Correo electrónico</label>
+				<input type="email" class="form-control" id="username" name="username">
+				<i class="icon_mail_alt"></i>
+			</div>
+			<div class="form-group">
+				<label>Contraseña</label>
+				<input type="password" class="form-control" id="password" name="password">
+				<i class="icon_lock_alt"></i>
+			</div>
+			<div class="clearfix add_bottom_15">
+				<div class="checkboxes float-left">
+					<label class="container_check">Recordar
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+				</div>
+				<div class="float-right mt-1"><a id="forgot" href="javascript:void(0);">Se te olvidó tu contraseña?</a></div>
+			</div>
+			<div class="text-center"><input type="submit" value="Entrar" class="btn_1 full-width"></div>
+			<div class="text-center"> Nuevo en let's? <a href="/register">Regístrate!</a>
+			</div>
+			<div id="forgot_pw">
+				<div class="form-group">
+					<label>Confirme su correo electrónico</label>
+					<input type="email" class="form-control" name="email_forgot" id="email_forgot">
+					<i class="icon_mail_alt"></i>
+				</div>
+				<p>Recibirá un correo electrónico con un enlace que le permitirá restablecer su contraseña a una nueva preferida.</p>
+				<div class="text-center"><input type="submit" value="Restablecer contraseña" class="btn_1"></div>
+			</div>
+		</div>
+	</form>
+	<!--form -->
+</div>

@@ -24,13 +24,22 @@ public class LoginController {
 	private String urlBackend;
 	
 	@GetMapping("/")
-    public String login(Authentication auth, Model model) {
-	  return sessionService.index(auth, model);
+    public ModelAndView indexSite() {
+		ModelAndView mv = new ModelAndView("site/index");	
+        mv.addObject("urlBackend", this.urlBackend);
+        return mv;
     }
 
     @GetMapping("/login")
     public String login(Model model, Principal principal, RedirectAttributes flash, @RequestParam(value = "error", required = false) String error) {
        return sessionService.login(model, principal, flash, error);
+    }
+    
+    @GetMapping("/register")
+    public ModelAndView register(Model model) {
+       ModelAndView mv = new ModelAndView("register");	
+       mv.addObject("urlBackend", this.urlBackend);
+       return mv;
     }
     
     @GetMapping("/session/confirmation-email")

@@ -13,7 +13,7 @@ import com.kmp.site.travelweb.application.dto.login.RequestCreateUser;
 public interface SessionService {
 
 	String login(Model model, Principal principal, RedirectAttributes flash, String error);
-	String index(Authentication auth, Model model);
+	String indexPartner(Authentication auth, Model model);
 	ModelAndView confirmMail(String token);
 
 }

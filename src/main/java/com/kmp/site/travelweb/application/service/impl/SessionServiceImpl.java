@@ -46,7 +46,7 @@ public class SessionServiceImpl implements SessionService {
 	}
 
 	@Override
-	public String index(Authentication auth, Model model) {
+	public String indexPartner(Authentication auth, Model model) {
 		model.addAttribute(URL_BACKEND, this.urlBackend); 
 		if(auth != null) {
 			   auth.getAuthorities();

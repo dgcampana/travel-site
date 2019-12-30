@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Panagea - Premium site template for travel agencies, hotels and restaurant listing.">
+    <meta name="author" content="Ansonika">
+    <title>Let's</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link th:href="@{css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{css/style.css}" rel="stylesheet">
+	<link th:href="@{css/vendors.css}" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link th:href="@{css/custom.css}" rel="stylesheet">
+
+</head>
+
+<body id="register_bg">
+	
+	<nav id="menu" class="fake_menu"></nav>
+	
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div>
+	<!-- End Preload -->
+	
+	<div id="login">
+		<aside>
+			<figure>
+				<a href="/"><img src="img/logos/Black.svg" width="200" data-retina="true" alt="" class="logo_sticky"></a>
+			</figure>
+			<div id="errorRegister" class="alert alert-danger d-none">
+			   	<span id="errorText"></span>
+			</div>
+			<div id="successRegister" class="alert alert-success d-none">
+			   	<span id="successText"></span>
+			</div>
+			<form id="registerFormStep1" autocomplete="off">
+				<div class="form-group">
+					<label>Nombre</label>
+					<input id="name" name="validation-required" class="form-control" type="text">
+					<i class="ti-user"></i>
+				</div>
+				<div class="form-group">
+					<label>Apellido</label>
+					<input id="lastname" name="validation-required-2" class="form-control" type="text">
+					<i class="ti-user"></i>
+				</div>
+				<div class="form-group">
+					<label>Correo electrónico</label>
+					<input id="email" name="validation-email" class="form-control" type="email">
+					<i class="icon_mail_alt"></i>
+				</div>
+				<div class="form-group">
+					<label>Contraseña</label>
+					<input id="passwordRegister" name="validation-password" class="form-control" type="password">
+					<i class="icon_lock_alt"></i>
+				</div>
+				<div class="form-group">
+					<label>Confirmar contraseña</label>
+					<input id="confirmPassword" name="validation-password-confirmation" class="form-control" type="password">
+					<i class="icon_lock_alt"></i>
+				</div>
+				<div id="pass-info" class="clearfix"></div>
+				<button id="btnSubmitRegister" type="button" onclick="clickRegister()" class="btn_1 full-width add_top_30">Registarse!</button>
+				<div class="text-center add_top_10">Ya tienes una cuenta? <strong><a href="/login">Inicia Sesión</a></strong></div>
+			</form>
+			<div class="copy">© 2020 Campana</div>
+		</aside>
+	</div>
+	<!-- /login -->
+	
+    <!-- Required Js -->
+  	<script th:inline="javascript">
+      /*<![CDATA[*/
+        var _urlBackend = /*[[${urlBackend}]]*/ '';
+       /*]]>*/
+	</script> 
+	
+		<!-- COMMON SCRIPTS -->
+    <script th:src="@{js/jquery-2.2.4.min.js}"></script>
+    <script th:src="@{js/common_scripts.js}"></script>
+    <script th:src="@{js/main.js}"></script>
+	<script th:src="@{js/jquery.validate.min.js}"></script>	
+ 
+    <script th:src="@{application/js/login/register.js}" type="text/javascript"></script>
+	
+	<!-- SPECIFIC SCRIPTS -->
+	<script th:src="@{js/pw_strenght.js}"></script>
+	
+	
+  
+</body>
+</html>
