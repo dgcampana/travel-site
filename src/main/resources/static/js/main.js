@@ -281,7 +281,7 @@
 			});
 		} else {
 			$('.sticky_horizontal').stick_in_parent({
-				offset_top: 67
+				offset_top: 87
 			});
 		}
 	});
