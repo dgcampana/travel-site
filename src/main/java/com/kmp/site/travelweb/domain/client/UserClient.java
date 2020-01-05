@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.kmp.site.travelweb.application.dto.GenericResponse;
-import com.kmp.site.travelweb.application.dto.login.RequestCreateUser;
 import com.kmp.site.travelweb.application.dto.login.RequestUserCheck;
 import com.kmp.site.travelweb.application.dto.login.ResponseUserCheck;
 

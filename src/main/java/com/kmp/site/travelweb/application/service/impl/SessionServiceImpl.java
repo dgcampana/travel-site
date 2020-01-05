@@ -62,7 +62,7 @@ public class SessionServiceImpl implements SessionService {
 
 	@Override
 	public ModelAndView confirmMail(String token) {
-		ModelAndView mv = new ModelAndView("confirmation");
+		ModelAndView mv = new ModelAndView("email-confirm");
 		try {
 			GenericResponse response = userClient.userValidate(token);
 			mv.addObject("message", response.getMessage());

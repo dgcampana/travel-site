@@ -55,7 +55,7 @@ function registerUser() {
 	    	
 	    	setTimeout(function(){
     			$("#errorRegister").addClass("d-none");
-    		}, 5000);
+    		}, 10000);
 	    },
 	    complete: function() {
 	    	$("#preloader").addClass("d-none");

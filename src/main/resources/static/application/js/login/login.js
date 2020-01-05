@@ -39,7 +39,7 @@ function submitLogin(){
 			    	
 			    	setTimeout(function(){ 
 			    		$("#ajaxError").addClass("d-none");
-			    	}, 3000);
+			    	}, 10000);
 			    },
 			    complete: function() {
 				}
