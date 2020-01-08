@@ -36,11 +36,11 @@ public class SessionServiceImpl implements SessionService {
 	public String login(Model model, Principal principal, RedirectAttributes flash, String error) {
 		model.addAttribute(URL_BACKEND, this.urlBackend);
 		if(principal != null) {
-    	   flash.addFlashAttribute("info","Ya has iniciado sesi√≥n");
+    	   flash.addFlashAttribute("info","Ya has iniciado sesiÛn");
     	   return "redirect:/";
        }
        if(error != null ) {
-    	   model.addAttribute("error", "usuario o contrase√±a inv√°lida");
+    	   model.addAttribute("error", "usuario o contraseÒa inv·lida");
        }
     	return "login";
 	}
@@ -49,12 +49,12 @@ public class SessionServiceImpl implements SessionService {
 	public String indexPartner(Authentication auth, Model model) {
 		model.addAttribute(URL_BACKEND, this.urlBackend); 
 		if(auth != null) {
-			   auth.getAuthorities();
 			   if(utilAuthenticationService.isRootOrAgent(auth)) {
 				   return "partner/index"; 
 			   } else {
 				   model.addAttribute("accessDenied", true);
 				   model.addAttribute("accessDeniedMsg", "Lo sentimos, a√∫n no eres partner"); 
+				   return "site/index"; 
 			   }
 		}
 		return "login";

@@ -15,7 +15,9 @@
 		-->
 		<li><a href="cart" class="cart-menu-btn" title="Carrito"></a></li>
 		<li><a href="wishlist" class="wishlist_bt_top" title="Favoritos">Favoritos</a></li>
-		<li><a href="#sign-in-dialog" id="sign-in" class="login" title="Inicio de sesión">Inicio de sesión</a></li>
+		<li sec:authorize="!isAuthenticated()">
+			<a href="#sign-in-dialog" id="sign-in" class="login" title="Inicio de sesión">Inicio de sesi&oacute;n</a>
+		</li>
 	</ul>
 	<!-- /top_menu -->
 	<a href="#menu" class="btn_mobile">
