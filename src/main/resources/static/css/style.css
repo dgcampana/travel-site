@@ -5836,7 +5836,7 @@ a.grid_item.latest_adventure em {
 }
 @media (max-width: 767px) {
   .banner {
-    background: url(../img/banner_bg_mobile.jpg) center center no-repeat;
+    background: url(https://res.cloudinary.com/dbvzu5xx5/image/upload/c_scale,e_auto_brightness,w_500/v1578541798/Index-header/plaza-publica_wovei6.jpg) center center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
