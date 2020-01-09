@@ -396,6 +396,17 @@ Author URI: http://themeforest.net/user/Ansonika/
 30px = 1.875rem
 32px = 2rem
 */
+
+@font-face {
+    font-family: 'Montserrat-Light'; /*a name to be used later*/
+    src: url('../fonts/Montserrat/Montserrat-Light.ttf'); /*URL to font*/
+}
+@font-face {
+    font-family: 'Montserrat-Regular'; /*a name to be used later*/
+    src: url('../fonts/Montserrat/Montserrat-Regular.ttf'); /*URL to font*/
+}
+
+
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -405,7 +416,7 @@ body {
   background: #f8f8f8;
   font-size: 0.875rem;
   line-height: 1.6;
-  font-family: "Poppins", Helvetica, sans-serif;
+  font-family: "Montserrat-Regular";
   color: #555;
 }
 
@@ -5812,7 +5823,8 @@ a.grid_item.latest_adventure em {
 }
 
 .banner {
-  background: url(../img/banner_bg_desktop.jpg) center center no-repeat;
+	/* TODO: IMG*/
+  background: url(https://res.cloudinary.com/dbvzu5xx5/image/upload/c_scale,e_auto_brightness,w_1400/v1578541798/Index-header/plaza-publica_wovei6.jpg) center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -6248,7 +6260,8 @@ ul.list_feat li p {
 }
 
 .call_section {
-  background: url(../img/bg_call_section.jpg) center center no-repeat fixed;
+  /* TODO: IMG */			
+  background: url(https://res.cloudinary.com/dbvzu5xx5/image/upload/c_mfit,w_1475/v1578541804/Index-header/index-parallax_jy3c5s.jpg) center center no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
