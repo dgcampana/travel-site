@@ -13,7 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.kmp.site.travelweb.application.dto.GenericResponse;
-import com.kmp.site.travelweb.application.dto.login.RequestCreateUser;
 import com.kmp.site.travelweb.domain.client.UserClient;
 import com.kmp.site.travelweb.domain.service.SessionService;
 import com.kmp.site.travelweb.domain.service.UtilAuthenticationService;
@@ -36,11 +35,11 @@ public class SessionServiceImpl implements SessionService {
 	public String login(Model model, Principal principal, RedirectAttributes flash, String error) {
 		model.addAttribute(URL_BACKEND, this.urlBackend);
 		if(principal != null) {
-    	   flash.addFlashAttribute("info","Ya has iniciado sesión");
+    	   flash.addFlashAttribute("info","Ya has iniciado sesion");
     	   return "redirect:/";
        }
        if(error != null ) {
-    	   model.addAttribute("error", "usuario o contraseña inválida");
+    	   model.addAttribute("error", "usuario o contrasena invalida");
        }
     	return "login";
 	}
@@ -53,7 +52,7 @@ public class SessionServiceImpl implements SessionService {
 				   return "partner/index"; 
 			   } else {
 				   model.addAttribute("accessDenied", true);
-				   model.addAttribute("accessDeniedMsg", "Lo sentimos, aÃºn no eres partner"); 
+				   model.addAttribute("accessDeniedMsg", "Lo sentimos, aun no eres partner"); 
 				   return "site/index"; 
 			   }
 		}
