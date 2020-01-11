@@ -2321,7 +2321,7 @@ video {
   height: 620px;
 }
 .hero_single.version_2:before {
-  background: url(../img/home_section_1.jpg) center center no-repeat;
+  background: url(https://res.cloudinary.com/dbvzu5xx5/image/upload/c_scale,w_3000/v1578541786/Index-header/bellas-artes_1_hulhcs.jpg) center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -2329,7 +2329,7 @@ video {
 }
 .hero_single.version_2 .wrapper {
   background-color: black;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .hero_single.version_2 .wrapper h3 {
   font-size: 42px;

@@ -18,6 +18,9 @@
 		<li sec:authorize="!isAuthenticated()">
 			<a href="#sign-in-dialog" id="sign-in" class="login" title="Inicio de sesión">Inicio de sesi&oacute;n</a>
 		</li>
+		<li sec:authorize="isAuthenticated()">
+			<a href="/logout" id="sign-on" class="logout" title="Inicio de sesión">Inicio de sesi&oacute;n</a>
+		</li>
 	</ul>
 	<!-- /top_menu -->
 	<a href="#menu" class="btn_mobile">
@@ -29,9 +32,7 @@
 	</a>
 	<nav id="menu" class="main-menu">
 		<ul>
-			<li><span><a href="tours">Tours</a></span></li>
-			<li><span><a href="gastronomy">Gastronomía</a></span></li>
-			<li><span><a href="adventure">Aventura</a></span></li>
+			
 		</ul>
 	</nav>
 </header>
