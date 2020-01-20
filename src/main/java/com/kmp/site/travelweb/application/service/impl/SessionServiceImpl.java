@@ -29,6 +29,7 @@ public class SessionServiceImpl implements SessionService {
 	@Autowired
 	private UtilAuthenticationService utilAuthenticationService;
 	
+	@Autowired
 	private UserClient userClient;
 
 	@Override
@@ -64,8 +65,10 @@ public class SessionServiceImpl implements SessionService {
 		ModelAndView mv = new ModelAndView("email-confirm");
 		try {
 			GenericResponse response = userClient.userValidate(token);
+			System.out.println("Hola");
 			mv.addObject("message", response.getMessage());
 		}catch (Exception e) {
+			mv.addObject("message", e.getMessage());
 			log.error("ocurrio un error al confirmar el mail con el token: {}", token);
 			log.error("error: {}", e.getMessage());
 		}

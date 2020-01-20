@@ -31,12 +31,17 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
+		
+		String[] pathSources = {"/application/**","/js/**","/css/**","/img/**","/fonts/**","/vendor/**","/webjars/**"};
+		String[] pathUsers   = {"/", "/register", "/user-confirm"};
+		String[] pathSite    = {"/tours","/adventure","/gastronomy", "/detail", "/search/**"};
+		
 		http.sessionManagement()
     		.sessionCreationPolicy(SessionCreationPolicy.ALWAYS)
     		.and().authorizeRequests()
-				.antMatchers("/application/**","/js/**","/css/**","/img/**","/fonts/**","/vendor/**","/webjars/**").permitAll()
-				.antMatchers("/", "/register", "/session/confirmation-email").permitAll()
-				.antMatchers("/tours","/adventure","/gastronomy", "/detail", "/search/**").permitAll()
+				.antMatchers(pathSources).permitAll()
+				.antMatchers(pathUsers).permitAll()
+				.antMatchers(pathSite).permitAll()
             	.anyRequest().authenticated()
             .and()
             	.formLogin().loginPage("/login").permitAll()
