@@ -15,12 +15,14 @@ function submitLogin(){
 				"email": user,
 				"password" : password
 			};
-			
 			$.ajax({
 			    type: "POST",
 			    url: _urlBackend + "api/login",
 			    data: JSON.stringify(request),
 			    contentType: "application/json",
+			    headers: {
+			    	'Accept-Language': 'es'
+			    },
 
 			    beforeSend: function () {
 			    	$("#loader").removeClass("d-none");
@@ -32,7 +34,6 @@ function submitLogin(){
 			    	$("#loginForm").submit();
 			    },
 			    error: function (e) {
-			    	console.log("Login error: ",e);
 			    	$("#loader").addClass("d-none");
 			    	$("#ajaxError").removeClass("d-none");
 			    	$("#ajaxErrorMessage").text(e.responseJSON.message);
@@ -45,7 +46,6 @@ function submitLogin(){
 				}
 			});
 		}
-			
 	});
 }
 

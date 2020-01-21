@@ -4,9 +4,21 @@
 	</div>
 	<div class="sign-in-wrapper">
 		<form id="loginForm" th:action="@{/login}" method="post">
-			<a href="#0" class="social_bt facebook">Login con Facebook</a>
-			<a href="#0" class="social_bt google">Login con Google</a>
-			<div class="divider"><span>O</span></div>
+			<div th:if="${param.error}">
+			    <div class="alert alert-danger">
+			        <span th:text="${error}"></span>
+			    </div>
+			</div>
+			<div id="ajaxError" class="d-none">
+			    <div class="alert alert-danger">
+			    	<span id="ajaxErrorMessage"></span>
+				</div>
+			</div>
+			<div th:if="${ accessDenied == true }">
+			    <div class="alert alert-danger">
+			        <span th:text="${accessDeniedMsg}"></span>
+			    </div>
+			</div>
 			<div class="form-group">
 				<label>Correo electr&oacute;nico</label>
 				<input type="email" class="form-control" id="username" name="username"></input>

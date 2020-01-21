@@ -23,7 +23,7 @@ function submitLogin(){
 			    contentType: "application/json",
 
 			    beforeSend: function () {
-			    	$("#loader").removeClass("d-none");
+			    	$("#preloader").removeClass("d-none");
 			    },
 			    success: function (data) {
 			    	if( data.code == 200 ){
@@ -33,7 +33,7 @@ function submitLogin(){
 			    },
 			    error: function (e) {
 			    	console.log("Login error: ",e);
-			    	$("#loader").addClass("d-none");
+			    	$("#preloader").addClass("d-none");
 			    	$("#ajaxError").removeClass("d-none");
 			    	$("#ajaxErrorMessage").text(e.responseJSON.message);
 			    	

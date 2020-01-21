@@ -6,33 +6,22 @@
 	<div id="logo">
 		<a href="/">
 			<img src="img/logos/White.svg" width="130" data-retina="true" alt="" class="logo_normal">
-			<img src="img/logos/Black.svg" width="130" data-retina="true" alt="" class="logo_sticky">
+			<img src="img/logos/White.svg" width="130" data-retina="true" alt="" class="logo_sticky">
 		</a>
 	</div>
-	<ul id="top_menu">
-		<!--  
-		<li><a href="cart" class="cart-menu-btn" title="Cart"><strong>4</strong></a></li>
-		-->
-		<li><a href="cart" class="cart-menu-btn" title="Carrito"></a></li>
-		<li><a href="wishlist" class="wishlist_bt_top" title="Favoritos">Favoritos</a></li>
-		<li sec:authorize="!isAuthenticated()">
-			<a href="#sign-in-dialog" id="sign-in" class="login" title="Inicio de sesi&oacute;n">Inicio de sesi&oacute;n</a>
-		</li>
-		<li sec:authorize="isAuthenticated()">
-			<a href="/logout" id="sign-on" class="logout" title="Inicio de sesi&oacute;n">Inicio de sesi&oacute;n</a>
-		</li>
-	</ul>
 	<!-- /top_menu -->
 	<a href="#menu" class="btn_mobile">
-		<div class="hamburger hamburger--spin" id="hamburger">
-			<div class="hamburger-box">
-				<div class="hamburger-inner"></div>
+			<div class="hamburger hamburger--spin" id="hamburger">
+				<div class="hamburger-box">
+					<div class="hamburger-inner"></div>
+				</div>
 			</div>
-		</div>
-	</a>
+		</a>
 	<nav id="menu" class="main-menu">
-		<ul>
-			
-		</ul>
-	</nav>
+			<ul>
+				<li><span><a href="adventure.html">Mi carrito <i class="icon-shop-1"></i></a></span></li>
+				<li><span><a href="#0">Mis favoritos <i class="icon-heart-7"></i></a></span></li>
+				<li sec:authorize="!isAuthenticated()"><span><a href="#sign-in-dialog" id="sign-in">Iniciar sesi&oacute;n <i class="icon-user-7"></i></a></span></li>
+			</ul>
+		</nav>
 </header>

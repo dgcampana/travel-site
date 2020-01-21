@@ -42,11 +42,6 @@
 				<a href="/"><img src="img/logos/Black.svg" width="200" data-retina="true" alt="" class="logo_sticky"></a>
 			</figure>
 			  <form id="loginForm" th:action="@{/login}" method="post">
-				<div class="access_social">
-					<a href="#0" class="social_bt facebook">Login con Facebook</a>
-					<a href="#0" class="social_bt google">Login con Google</a>
-				</div>
-				<div class="divider"><span>O</span></div>
 				<div th:if="${param.error}">
 				    <div class="alert alert-danger">
 				        <span th:text="${error}"></span>
