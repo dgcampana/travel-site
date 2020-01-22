@@ -11,17 +11,18 @@
 	</div>
 	<!-- /top_menu -->
 	<a href="#menu" class="btn_mobile">
-			<div class="hamburger hamburger--spin" id="hamburger">
-				<div class="hamburger-box">
-					<div class="hamburger-inner"></div>
-				</div>
+		<div class="hamburger hamburger--spin" id="hamburger">
+			<div class="hamburger-box">
+				<div class="hamburger-inner"></div>
 			</div>
-		</a>
+		</div>
+	</a>
 	<nav id="menu" class="main-menu">
-			<ul>
-				<li><span><a href="adventure.html">Mi carrito <i class="icon-shop-1"></i></a></span></li>
-				<li><span><a href="#0">Mis favoritos <i class="icon-heart-7"></i></a></span></li>
-				<li sec:authorize="!isAuthenticated()"><span><a href="#sign-in-dialog" id="sign-in">Iniciar sesi&oacute;n <i class="icon-user-7"></i></a></span></li>
-			</ul>
-		</nav>
+		<ul>
+			<li><span><a href="adventure.html">Mi carrito <i class="icon-shop-1"></i></a></span></li>
+			<li><span><a href="#0">Mis favoritos <i class="icon-heart-7"></i></a></span></li>
+			<li sec:authorize="!isAuthenticated()"><span><a href="#sign-in-dialog" id="sign-in">Iniciar sesi&oacute;n <i class="icon-user-7"></i></a></span></li>
+			<li sec:authorize="isAuthenticated()"><span><a href="/logout">Cerrar sesi&oacute;n <i class="icon-user-7"></i></a></span></li>
+		</ul>
+	</nav>
 </header>
