@@ -19,10 +19,11 @@
 	</a>
 	<nav id="menu" class="main-menu">
 		<ul>
-			<li><span><a href="adventure.html">Mi carrito <i class="icon-shop-1"></i></a></span></li>
-			<li><span><a href="#0">Mis favoritos <i class="icon-heart-7"></i></a></span></li>
-			<li sec:authorize="!isAuthenticated()"><span><a href="#sign-in-dialog" id="sign-in">Iniciar sesi&oacute;n <i class="icon-user-7"></i></a></span></li>
-			<li sec:authorize="isAuthenticated()"><span><a href="/logout">Cerrar sesi&oacute;n <i class="icon-user-7"></i></a></span></li>
+			<li sec:authorize="isAuthenticated()"><span><a href="#0"> Favoritos <i class="icon-heart-2"></i></a></span></li>
+			<li sec:authorize="isAuthenticated()"><span><a href="adventure.html">Mi perfil <i class="icon-user-outline"></i></a></span></li>
+			<li sec:authorize="isAuthenticated()"><span><a href="/logout"><i class="icon-logout-1"></i> Cerrar sesi&oacute;n </a></span></li>
+			
+			<li sec:authorize="!isAuthenticated()"><span><a href="#sign-in-dialog" id="sign-in">Iniciar sesi&oacute;n <i class="icon-login-1"></i></a></span></li>
 		</ul>
 	</nav>
 </header>

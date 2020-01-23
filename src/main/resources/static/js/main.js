@@ -277,7 +277,7 @@
 		var width = $(window).width();
 		if (width <= 991) {
 			$('.sticky_horizontal').stick_in_parent({
-				offset_top: 50
+				offset_top: 70
 			});
 		} else {
 			$('.sticky_horizontal').stick_in_parent({

@@ -65,7 +65,6 @@ public class SessionServiceImpl implements SessionService {
 		ModelAndView mv = new ModelAndView("email-confirm");
 		try {
 			GenericResponse response = userClient.userValidate(token);
-			System.out.println("Hola");
 			mv.addObject("message", response.getMessage());
 		}catch (Exception e) {
 			mv.addObject("message", e.getMessage());
