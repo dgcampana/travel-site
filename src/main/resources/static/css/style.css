@@ -651,7 +651,7 @@ a.btn_1,
 }
 a.btn_1:hover,
 .btn_1:hover {
-  background: #0054a6;
+  background: #161616;
   color: #fff;
 }
 a.btn_1.full-width,
@@ -696,15 +696,19 @@ a.btn_1.outline,
 }
 a.btn_1.outline:hover,
 .btn_1.outline:hover {
-  background: #0054a6;
+  background: #000;
   color: #fff;
-  border-color: #0054a6;
+  
 }
 a.btn_1.outline:focus,
 .btn_1.outline:focus {
   outline: none;
 }
 
+button:disabled,
+button[disabled]{
+  cursor: wait;
+}
 .closebt {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;

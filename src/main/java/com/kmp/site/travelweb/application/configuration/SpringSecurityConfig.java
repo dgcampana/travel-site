@@ -32,7 +32,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		
-		String[] pathSources = {"/application/**","/js/**","/css/**","/img/**","/fonts/**","/vendor/**","/webjars/**"};
+		String[] pathSources = {"/application/**","/js/**","/css/**","/img/**","/video/**","/fonts/**","/vendor/**","/webjars/**"};
 		String[] pathUsers   = {"/", "/register", "/user-confirm"};
 		String[] pathSite    = {"/tours","/adventure","/gastronomy", "/detail", "/search/**"};
 		

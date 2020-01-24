@@ -7,25 +7,20 @@
 </head>
 <body>
 	<!-- [ Main Content ] start -->
-    <div id="page" layout:fragment="content">
-       	<main>
-		<section class="hero_single version_2">
-			<div class="wrapper">
-				<div class="container">
-					<h3>Encuentra experiencias &uacute;nicas</h3>
-					<p>Explora los mejores tours, hoteles y restaurantes de todo el M&eacute;xico</p>
-					<form>
-						<div id="custom-search-input">
-							<div class="input-group">
-								<input type="text" class=" search-query" placeholder="Ex. Tours, Yoga ...">
-								<input type="submit" class="btn_search" value="Buscar">
-							</div>
-						</div>
-					</form>
+    <main layout:fragment="content">
+		<section class="header-video adventure">
+			<div id="hero_video">
+				<div class="wrapper">
+				<div class="container container-custom">
+					<small>Bienvenido</small>
+					<h3>Vibes mx </h3>
+					<p>Viajes a lugares extraordinarios.</p>
+					<a href="adventure-detail.html" class="btn_1">Ver mas</a>
 				</div>
 			</div>
+			</div>
+			<img src="img/video_fix.png" alt="" class="header-video--media" data-video-src="video/adventure" data-teaser-source="video/adventure" data-provider="" data-video-width="1920" data-video-height="960">
 		</section>
-		
 		<div class="search_container">
 			<div class="container">
 				<div class="col-lg-12">
@@ -288,13 +283,21 @@
 		<!--/call_section-->
 	</main>
 	<!-- /main -->
-    </div>
     <div layout:fragment="cssSources">
    	
     </div>
     <div layout:fragment="javascriptSources">
-   	<!-- datatable Js -->
-   	<script th:src="@{application/js/site/index.js}"></script>
+   		<script th:src="@{application/js/site/index.js}"></script>
+   		<!-- SPECIFIC SCRIPTS -->
+		<script th:src="@{js/video_header.js}"></script>
+		<script>
+			HeaderVideo.init({
+				container: $('.header-video'),
+				header: $('.header-video--media'),
+				videoTrigger: $("#video-trigger"),
+				autoPlayVideo: true
+			});
+		</script>
     </div>
     <!-- [ Main Content ] end -->
     

@@ -23,7 +23,8 @@ function submitLogin(){
 			    contentType: "application/json",
 
 			    beforeSend: function () {
-			    	$("#preloader").removeClass("d-none");
+			    	$("#btnSubmitLoad").removeClass("d-none");
+			    	$("#btnSubmit").addClass("d-none");
 			    },
 			    success: function (data) {
 			    	if( data.code == 200 ){
@@ -32,8 +33,9 @@ function submitLogin(){
 			    	$("#loginForm").submit();
 			    },
 			    error: function (e) {
-			    	console.log("Login error: ",e);
-			    	$("#preloader").addClass("d-none");
+			    	$("#btnSubmitLoad").addClass("d-none");
+			    	$("#btnSubmit").removeClass("d-none");
+			
 			    	$("#ajaxError").removeClass("d-none");
 			    	$("#ajaxErrorMessage").text(e.responseJSON.message);
 			    	

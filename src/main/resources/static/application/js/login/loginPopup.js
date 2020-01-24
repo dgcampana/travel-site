@@ -25,7 +25,9 @@ function submitLogin(){
 			    },
 
 			    beforeSend: function () {
-			    	$("#loader").removeClass("d-none");
+			    	$("#btnSubmitLoad").removeClass("d-none");
+			    	$("#btnSubmit").addClass("d-none");
+			    	
 			    },
 			    success: function (data) {
 			    	if( data.code == 200 ){
@@ -34,7 +36,9 @@ function submitLogin(){
 			    	$("#loginForm").submit();
 			    },
 			    error: function (e) {
-			    	$("#loader").addClass("d-none");
+			    	$("#btnSubmitLoad").addClass("d-none");
+			    	$("#btnSubmit").removeClass("d-none");
+			    	
 			    	$("#ajaxError").removeClass("d-none");
 			    	$("#ajaxErrorMessage").text(e.responseJSON.message);
 			    	
@@ -43,6 +47,7 @@ function submitLogin(){
 			    	}, 10000);
 			    },
 			    complete: function() {
+			    	
 				}
 			});
 		}
