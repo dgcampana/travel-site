@@ -829,7 +829,7 @@ header.header.sticky {
   -webkit-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
   padding: 15px 20px;
 }
 @media (max-width: 991px) {
@@ -902,7 +902,7 @@ ul#top_menu li a.login, ul#top_menu li a.wishlist_bt_top, ul#top_menu li a.cart-
   }
 }
 ul#top_menu li a.login:before, ul#top_menu li a.wishlist_bt_top:before, ul#top_menu li a.cart-menu-btn:before {
-  font-family: 'Glyphter';
+  font-family: 'fontello';
   font-size: 21px;
   font-size: 1.3125rem;
   color: #fff;
@@ -921,7 +921,7 @@ ul#top_menu li a.wishlist_bt_top {
   overflow: hidden;
 }
 ul#top_menu li a.wishlist_bt_top:before {
-  content: '\0043';
+  content: '\ee46';
 }
 
 ul#top_menu li a.login {
@@ -929,11 +929,11 @@ ul#top_menu li a.login {
   overflow: hidden;
 }
 ul#top_menu li a.login:before {
-  content: '\0042';
+  content: '\ee47';
 }
 
 ul#top_menu li a.cart-menu-btn {
-  top: 6px;
+  top: 8px;
 }
 @media (max-width: 991px) {
   ul#top_menu li a.cart-menu-btn {
@@ -941,7 +941,7 @@ ul#top_menu li a.cart-menu-btn {
   }
 }
 ul#top_menu li a.cart-menu-btn:before {
-  content: '\0041';
+  content: '\ee5d';
 }
 ul#top_menu li a.cart-menu-btn strong {
   font-size: 11px;
@@ -1161,6 +1161,9 @@ header.sticky .hamburger-inner, header.sticky .hamburger-inner::before, header.s
   background-color: black;
   background-color: rgba(0, 0, 0, 0.6);
 }
+
+
+
 .hero_in.tours_detail {
   height: 550px;
 }
@@ -1180,6 +1183,25 @@ header.sticky .hamburger-inner, header.sticky .hamburger-inner::before, header.s
   background-color: black;
   background-color: rgba(0, 0, 0, 0.6);
 }
+
+
+
+
+.hero_in.welcome_detail {
+  height: 550px;
+}
+@media (max-width: 575px) {
+  .hero_in.welcome_detail {
+    height: 500px;
+  }
+}
+.hero_in.welcome_detail .wrapper {
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+
 .hero_in.hotels_detail {
   height: 550px;
 }
@@ -6740,18 +6762,18 @@ ul.bullets li:before {
 }
 
 .margin_80_55 {
-  padding-top: 80px;
+  padding-top: 40px;
   padding-bottom: 55px;
 }
 @media (max-width: 991px) {
   .margin_80_55 {
-    padding-top: 60px;
+    padding-top: 40px;
     padding-bottom: 35px;
   }
 }
 @media (max-width: 575px) {
   .margin_80_55 {
-    padding-top: 45px;
+    padding-top: 40px;
     padding-bottom: 15px;
   }
 }
@@ -7401,3 +7423,5 @@ a.social_bt.google:before {
     display: none;
   }
 }
+
+

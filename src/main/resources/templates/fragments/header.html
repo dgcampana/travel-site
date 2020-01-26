@@ -10,9 +10,9 @@
 		</a>
 	</div>
 	<ul id="top_menu">
-		<li sec:authorize="isAuthenticated()"><a href="cart-1.html" class="cart-menu-btn" title="Cart"><strong>4</strong></a></li>
-		<li><a href="#sign-in-dialog" id="sign-in" class="login" title="Sign In">Sign In</a></li>
-		<li><a href="wishlist.html" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
+		<li sec:authorize="isAuthenticated()" ><a href="/wishlist" class="wishlist_bt_top" title="Lista de deseos"></a></li>
+		<li sec:authorize="isAuthenticated()" ><a href="/logout" class="cart-menu-btn" title="Cerrar sesi&oacute;n"></a></li>
+		<li sec:authorize="!isAuthenticated()"><a href="#sign-in-dialog" id="sign-in" class="login" title="Iniciar sesi&oacute;n"></a></li>
 	</ul>
 	<!-- /top_menu -->
 	<a href="#menu" class="btn_mobile">
@@ -24,44 +24,29 @@
 	</a>
 	<nav id="menu" class="main-menu">
 		<ul>
-			<li><span><a href="#0">Tours</a></span>
+			<li sec:authorize="hasAnyRole('ROLE_ROOT','ROLE_AGENT')"><span><a href="#0">Administraci&oacute;n</a></span>
 				<ul>
-					<li>
-						<span><a href="#0">Tours grid</a></span>
-						<ul>
-							<li><a href="tours-grid-isotope.html">Tours grid isotope</a></li>
-							<li><a href="tours-grid-sidebar.html">Tours grid sidebar</a></li>
-							<li><a href="tours-grid-sidebar-2.html">Tours grid sidebar 2</a></li>
-							<li><a href="tours-grid.html">Tours grid simple</a></li>
-						</ul>
-					</li>
-					<li>
-						<span><a href="#0">Tours list</a></span>
-						<ul>
-							<li><a href="tours-list-isotope.html">Tours list isotope</a></li>
-							<li><a href="tours-list-sidebar.html">Tours list sidebar</a></li>
-							<li><a href="tours-list-sidebar-2.html">Tours list sidebar 2</a></li>
-							<li><a href="tours-list.html">Tours list simple</a></li>
-						</ul>
-					</li>
-					<li><a href="tour-detail.html">Tour detail</a></li>
+					<li><a href="hotel-detail.html">Reservaciones</a></li>
+					<li><a href="hotel-detail.html">Experiencias</a></li>
+					<li><a href="hotel-detail.html">Panel de control</a></li>
 				</ul>
 			</li>
-			<li><span><a href="#0">Hoteles</a></span>
+			<li sec:authorize="hasRole('ROLE_USER')"><span><a href="#0">Mi perfil</a></span>
 				<ul>
-					<li>
-						<span><a href="#0">Hotel grid</a></span>
-						<ul>
-							<li><a href="hotels-grid-isotope.html">Hotel grid isotope</a></li>
-							<li><a href="hotels-grid-sidebar.html">Hotel grid sidebar</a></li>
-							<li><a href="hotels-grid-sidebar-2.html">Hotel grid sidebar 2</a></li>
-							<li><a href="hotels-grid.html">Hotel grid simple</a></li>
-						</ul>
-					</li>
-					<li><a href="hotel-detail.html">Hotel detail</a></li>
+					<li><a href="hotel-detail.html">Mis reservaciones</a></li>
+					<li><a href="hotel-detail.html">Mis metodos pago</a></li>
+					<li><a href="/wishlist">Mis Favoritos</a></li>
+				</ul>
+			</li>
+			<li><span><a href="#0">Tours</a></span>
+				<ul>
+					<li><a href="tour-detail.html">Pueblos magicos</a></li>
+					<li><a href="tour-detail.html">Sol, mar y arena</a></li>
+					<li><a href="tour-detail.html">Ruta gastronomica</a></li>
 				</ul>
 			</li>
 			<li><span><a href="adventure.html">Adventure</a></span></li>
+			<li><span><a href="#0">Hoteles</a></span></li>
 		</ul>
 	</nav>
 </header>
