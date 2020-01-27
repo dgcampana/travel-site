@@ -874,7 +874,7 @@ ul#top_menu li:last-child {
 }
 @media (max-width: 767px) {
   ul#top_menu li:first-child {
-    display: none;
+    /*display: none;*/
   }
 }
 ul#top_menu li a {
@@ -909,7 +909,7 @@ ul#top_menu li a.login:before, ul#top_menu li a.wishlist_bt_top:before, ul#top_m
   text-indent: 0;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 2px;
   font-weight: normal;
   line-height: 1;
 }
