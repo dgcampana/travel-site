@@ -4397,7 +4397,7 @@ ul.hotel_facilities li img {
 
 /*-------- 2.5 Login/register --------*/
 #login_bg, #register_bg {
-  background: url(../img/hero_in_bg_3.jpg) center center no-repeat fixed;
+  background: url(../img/login-bg.jpg) center center no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -4407,7 +4407,7 @@ ul.hotel_facilities li img {
 }
 
 #register_bg {
-  background: url(../img/hero_in_bg_2.jpg) center center no-repeat fixed;
+  background: url(../img/register-bg.jpg) center center no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -4418,7 +4418,7 @@ ul.hotel_facilities li img {
   text-align: center;
   border-bottom: 1px solid #ededed;
   margin: -45px -60px 25px -60px;
-  padding: 20px 60px 25px 60px;
+  padding: 70px 60px 60px 60px;
 }
 @media (max-width: 767px) {
   #login figure, #register figure {
