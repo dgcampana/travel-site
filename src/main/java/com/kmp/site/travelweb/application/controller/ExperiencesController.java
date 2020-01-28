@@ -12,29 +12,6 @@ public class ExperiencesController {
 	@Value("${backend.services.api}")
 	private String urlBackend;
 	
-	@GetMapping("tours")
-	public ModelAndView mainTours() {
-		ModelAndView mv = new ModelAndView("site/experience-grid");
-		mv.addObject("urlBackend", this.urlBackend);
-		mv.addObject("title", "Una gran experiencia");
-		return mv;
-	}
-	
-	@GetMapping("gastronomy")
-	public ModelAndView mainGastronomy() {
-		ModelAndView mv = new ModelAndView("site/experience-grid");
-		mv.addObject("urlBackend", this.urlBackend);
-		mv.addObject("title", "Ruta Gastronomica");
-		return mv;
-	}
-	
-	@GetMapping("adventure")
-	public ModelAndView mainAdventure() {
-		ModelAndView mv = new ModelAndView("site/experience-grid");
-		mv.addObject("urlBackend", this.urlBackend);
-		mv.addObject("title", "Vive la aventura");
-		return mv;
-	}
 	
 	@GetMapping("detail")
 	public ModelAndView detail( @RequestParam(required = false) String id ) {

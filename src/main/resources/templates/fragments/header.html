@@ -12,7 +12,7 @@
 	<ul id="top_menu">
 		<li sec:authorize="isAuthenticated()" ><a href="/wishlist" class="wishlist_bt_top" title="Lista de deseos"></a></li>
 		<li sec:authorize="isAuthenticated()" ><a href="/logout" class="cart-menu-btn" title="Cerrar sesi&oacute;n"></a></li>
-		<li sec:authorize="!isAuthenticated()"><a href="#sign-in-dialog" id="sign-in" class="login" title="Iniciar sesi&oacute;n"></a></li>
+		<li sec:authorize="!isAuthenticated()"><a href="/login"  class="login" title="Iniciar sesi&oacute;n"></a></li>
 	</ul>
 	<!-- /top_menu -->
 	<a href="#menu" class="btn_mobile">
@@ -26,9 +26,9 @@
 		<ul>
 			<li sec:authorize="hasAnyRole('ROLE_ROOT','ROLE_AGENT')"><span><a href="#0">Administraci&oacute;n</a></span>
 				<ul>
-					<li><a href="hotel-detail.html">Reservaciones</a></li>
-					<li><a href="hotel-detail.html">Experiencias</a></li>
-					<li><a href="hotel-detail.html">Panel de control</a></li>
+					<li><a href="/admin-reservation">Reservaciones</a></li>
+					<li><a href="admin-experiences">Experiencias</a></li>
+					<li><a href="/admin-panel">Panel de control</a></li>
 				</ul>
 			</li>
 			<li sec:authorize="hasRole('ROLE_USER')"><span><a href="#0">Mi perfil</a></span>

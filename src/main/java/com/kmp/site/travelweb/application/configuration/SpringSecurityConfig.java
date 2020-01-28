@@ -32,9 +32,9 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		
-		String[] pathSources = {"/application/**","/js/**","/css/**","/img/**","/video/**","/fonts/**","/vendor/**","/webjars/**"};
+		String[] pathSources = {"/application/**","/js/**","/css/**","/img/**","/video/**","/fonts/**","/admin_section/**","/vendor/**","/webjars/**"};
 		String[] pathUsers   = {"/", "/register", "/user-confirm"};
-		String[] pathSite    = {"/tours","/adventure","/gastronomy", "/detail", "/search/**"};
+		String[] pathSite    = {"/tours","/adventure","/gastronomy", "/detail", "/search/**"}; 
 		
 		http.sessionManagement()
     		.sessionCreationPolicy(SessionCreationPolicy.ALWAYS)
@@ -48,10 +48,9 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
             .and()
             	.logout()
 		            .deleteCookies("JSESSIONID")
-		            .invalidateHttpSession(true)
 		            .clearAuthentication(true)
 		            .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-		            .logoutSuccessUrl("/login?logout")
+		            .logoutSuccessUrl("/")
 		            .permitAll()
             .and()
             	.exceptionHandling().accessDeniedHandler(accessDeniedHandler);
