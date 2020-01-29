@@ -332,7 +332,7 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
   color: #868e96;
 }
 #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item > .nav-link {
-  color: #ced4da;
+  color: #FFF;
 }
 #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item > .nav-link:hover {
   color: #f8f9fa;
