@@ -60,7 +60,7 @@ Author URI: http://themeforest.net/user/Ansonika/
     position: relative;
     z-index: 9;
     width: auto;
-    top: 25px;
+    top: 12px;
     right: 15px;
     float: right;
     -moz-transition: all 0.3s ease-in-out;
@@ -100,7 +100,7 @@ Author URI: http://themeforest.net/user/Ansonika/
   }
 
   header.sticky .main-menu > ul > li span > a {
-    color: #FFF;
+    color: #444;
   }
   header.sticky .main-menu > ul > li span:hover > a {
     opacity: 1;
@@ -276,7 +276,7 @@ Author URI: http://themeforest.net/user/Ansonika/
     line-height: 25px;
   }
   ul.mm-listview li a {
-    color: #FFF !important;
+    color: #555 !important;
     display: block;
   }
 }
@@ -396,17 +396,6 @@ Author URI: http://themeforest.net/user/Ansonika/
 30px = 1.875rem
 32px = 2rem
 */
-
-@font-face {
-    font-family: 'Montserrat-Light'; /*a name to be used later*/
-    src: url('../fonts/Montserrat/Montserrat-Light.ttf'); /*URL to font*/
-}
-@font-face {
-    font-family: 'Montserrat-Regular'; /*a name to be used later*/
-    src: url('../fonts/Montserrat/Montserrat-Regular.ttf'); /*URL to font*/
-}
-
-
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -416,7 +405,7 @@ body {
   background: #f8f8f8;
   font-size: 0.875rem;
   line-height: 1.6;
-  font-family: "Montserrat-Regular";
+  font-family: "Poppins", Helvetica, sans-serif;
   color: #555;
 }
 
@@ -609,7 +598,7 @@ h3.slide_typo {
 
 /*General links color*/
 a {
-  color: #fc5b62;
+  color: #ff0364;
   text-decoration: none;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -629,7 +618,7 @@ a.btn_1,
 .btn_1 {
   border: none;
   color: #fff;
-  background: #000;
+  background: #ff0364;
   outline: none;
   cursor: pointer;
   display: inline-block;
@@ -651,7 +640,7 @@ a.btn_1,
 }
 a.btn_1:hover,
 .btn_1:hover {
-  background: #161616;
+  background: #0054a6;
   color: #fff;
 }
 a.btn_1.full-width,
@@ -696,19 +685,15 @@ a.btn_1.outline,
 }
 a.btn_1.outline:hover,
 .btn_1.outline:hover {
-  background: #000;
+  background: #0054a6;
   color: #fff;
-  
+  border-color: #0054a6;
 }
 a.btn_1.outline:focus,
 .btn_1.outline:focus {
   outline: none;
 }
 
-button:disabled,
-button[disabled]{
-  cursor: wait;
-}
 .closebt {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -829,12 +814,13 @@ header.header.sticky {
   -webkit-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid #ededed;
+  background-color: #fff;
   padding: 15px 20px;
 }
 @media (max-width: 991px) {
   header.header.sticky {
-    padding: 20px 20px 20px 20px;
+    padding: 15px 15px 5px 15px;
   }
 }
 header.header.sticky .logo_normal {
@@ -846,7 +832,7 @@ header.header.sticky .logo_sticky {
 
 ul#top_menu {
   float: right;
-  margin: 15px 0 0 10px;
+  margin: 0 0 0 10px;
   padding: 0;
   font-size: 13px;
   font-size: 0.8125rem;
@@ -874,7 +860,7 @@ ul#top_menu li:last-child {
 }
 @media (max-width: 767px) {
   ul#top_menu li:first-child {
-    /*display: none;*/
+    display: none;
   }
 }
 ul#top_menu li a {
@@ -902,38 +888,36 @@ ul#top_menu li a.login, ul#top_menu li a.wishlist_bt_top, ul#top_menu li a.cart-
   }
 }
 ul#top_menu li a.login:before, ul#top_menu li a.wishlist_bt_top:before, ul#top_menu li a.cart-menu-btn:before {
-  font-family: 'fontello';
+  font-family: 'Glyphter';
   font-size: 21px;
   font-size: 1.3125rem;
   color: #fff;
   text-indent: 0;
   position: absolute;
   left: 0;
-  top: 2px;
+  top: 0;
   font-weight: normal;
   line-height: 1;
 }
 .sticky ul#top_menu li a.login:before, .sticky ul#top_menu li a.wishlist_bt_top:before, .sticky ul#top_menu li a.cart-menu-btn:before {
-  color: #FFF;
+  color: #444;
 }
 ul#top_menu li a.wishlist_bt_top {
   text-indent: -9999px;
   overflow: hidden;
 }
 ul#top_menu li a.wishlist_bt_top:before {
-  content: '\ee46';
+  content: '\0043';
 }
-
 ul#top_menu li a.login {
   text-indent: -9999px;
   overflow: hidden;
 }
 ul#top_menu li a.login:before {
-  content: '\ee47';
+  content: '\0042';
 }
-
 ul#top_menu li a.cart-menu-btn {
-  top: 8px;
+  top: 6px;
 }
 @media (max-width: 991px) {
   ul#top_menu li a.cart-menu-btn {
@@ -941,7 +925,7 @@ ul#top_menu li a.cart-menu-btn {
   }
 }
 ul#top_menu li a.cart-menu-btn:before {
-  content: '\ee5d';
+  content: '\0041';
 }
 ul#top_menu li a.cart-menu-btn strong {
   font-size: 11px;
@@ -1099,7 +1083,7 @@ header.sticky .hamburger-inner, header.sticky .hamburger-inner::before, header.s
   }
   #logo img {
     width: auto;
-    height: 40px;
+    height: 30px;
     margin: 12px 0 0 0;
   }
 }
@@ -1161,9 +1145,6 @@ header.sticky .hamburger-inner, header.sticky .hamburger-inner::before, header.s
   background-color: black;
   background-color: rgba(0, 0, 0, 0.6);
 }
-
-
-
 .hero_in.tours_detail {
   height: 550px;
 }
@@ -1183,25 +1164,6 @@ header.sticky .hamburger-inner, header.sticky .hamburger-inner::before, header.s
   background-color: black;
   background-color: rgba(0, 0, 0, 0.6);
 }
-
-
-
-
-.hero_in.welcome_detail {
-  height: 550px;
-}
-@media (max-width: 575px) {
-  .hero_in.welcome_detail {
-    height: 500px;
-  }
-}
-.hero_in.welcome_detail .wrapper {
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-
-
 .hero_in.hotels_detail {
   height: 550px;
 }
@@ -1362,7 +1324,7 @@ main {
 
 /* Footer */
 footer {
-  background-color: #000000;
+  background-color: #121921;
   color: #fbfbfb;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -1495,7 +1457,7 @@ footer #copy {
   -moz-border-radius: 0 3px 3px 0;
   -ms-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
-  background-color: #fc5b62;
+  background-color: #ff0364;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -2348,7 +2310,7 @@ video {
   height: 620px;
 }
 .hero_single.version_2:before {
-  background: url(https://res.cloudinary.com/dbvzu5xx5/image/upload/c_scale,w_3000/v1578541786/Index-header/bellas-artes_1_hulhcs.jpg) center center no-repeat;
+  background: url(../img/home_section_1.jpg) center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -2356,7 +2318,7 @@ video {
 }
 .hero_single.version_2 .wrapper {
   background-color: black;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.45);
 }
 .hero_single.version_2 .wrapper h3 {
   font-size: 42px;
@@ -2768,7 +2730,7 @@ video {
   display: inline-block;
   font-size: 11px;
   font-weight: 600;
-  font-family: "Montserrat-Regular";
+  font-family: "Open Sans", sans-serif;
   line-height: 18px;
   text-align: center;
   position: relative;
@@ -2801,7 +2763,7 @@ video {
   }
 }
 #reccomended .item {
-  margin: 0 0;
+  margin: 0 15px;
 }
 
 #reccomended .owl-item {
@@ -2846,7 +2808,7 @@ video {
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-  background: #fc5b62 !important;
+  background: #ff0364 !important;
 }
 
 .owl-theme .owl-dots .owl-dot span {
@@ -3891,7 +3853,7 @@ a.boxed_list:hover i {
   margin-right: 20px;
   font-weight: 500;
   font-size: 16px;
-  font-size: .9rem;
+  font-size: 1rem;
 }
 .secondary_nav ul li a {
   color: rgba(0, 0, 0, 0.5);
@@ -3925,6 +3887,7 @@ a.boxed_list:hover i {
 }
 
 section#description, section#reviews {
+  border-bottom: 3px solid #ededed;
   margin-bottom: 45px;
 }
 section#description h2, section#reviews h2 {
@@ -4397,7 +4360,7 @@ ul.hotel_facilities li img {
 
 /*-------- 2.5 Login/register --------*/
 #login_bg, #register_bg {
-  background: url(../img/login-bg.jpg) center center no-repeat fixed;
+  background: url(../img/hero_in_bg_3.jpg) center center no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -4407,7 +4370,7 @@ ul.hotel_facilities li img {
 }
 
 #register_bg {
-  background: url(../img/register-bg.jpg) center center no-repeat fixed;
+  background: url(../img/hero_in_bg_2.jpg) center center no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -4418,7 +4381,7 @@ ul.hotel_facilities li img {
   text-align: center;
   border-bottom: 1px solid #ededed;
   margin: -45px -60px 25px -60px;
-  padding: 70px 60px 60px 60px;
+  padding: 20px 60px 25px 60px;
 }
 @media (max-width: 767px) {
   #login figure, #register figure {
@@ -4696,7 +4659,7 @@ a.social_bt.linkedin:before {
   background: white;
   position: relative;
   z-index: 999;
-  font-family: "Montserrat-Regular";
+  font-family: "Poppins", Helvetica, sans-serif;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12);
 }
 .marker_info img {
@@ -5849,8 +5812,7 @@ a.grid_item.latest_adventure em {
 }
 
 .banner {
-	/* TODO: IMG*/
-  background: url(https://res.cloudinary.com/dbvzu5xx5/image/upload/c_scale,e_auto_brightness,w_1400/v1578541798/Index-header/plaza-publica_wovei6.jpg) center center no-repeat;
+  background: url(../img/banner_bg_desktop.jpg) center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -5862,7 +5824,7 @@ a.grid_item.latest_adventure em {
 }
 @media (max-width: 767px) {
   .banner {
-    background: url(https://res.cloudinary.com/dbvzu5xx5/image/upload/c_scale,e_auto_brightness,w_500/v1578541798/Index-header/plaza-publica_wovei6.jpg) center center no-repeat;
+    background: url(../img/banner_bg_mobile.jpg) center center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -6286,8 +6248,7 @@ ul.list_feat li p {
 }
 
 .call_section {
-  /* TODO: IMG */			
-  background: url(https://res.cloudinary.com/dbvzu5xx5/image/upload/c_mfit,w_1475/v1578541804/Index-header/index-parallax_jy3c5s.jpg) center center no-repeat fixed;
+  background: url(../img/bg_call_section.jpg) center center no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -6762,18 +6723,18 @@ ul.bullets li:before {
 }
 
 .margin_80_55 {
-  padding-top: 40px;
+  padding-top: 80px;
   padding-bottom: 55px;
 }
 @media (max-width: 991px) {
   .margin_80_55 {
-    padding-top: 40px;
+    padding-top: 60px;
     padding-bottom: 35px;
   }
 }
 @media (max-width: 575px) {
   .margin_80_55 {
-    padding-top: 40px;
+    padding-top: 45px;
     padding-bottom: 15px;
   }
 }
@@ -7423,5 +7384,3 @@ a.social_bt.google:before {
     display: none;
   }
 }
-
-

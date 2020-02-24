@@ -1,15 +1,15 @@
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top" id="mainNav" th:fragment="header" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
-    <a class="navbar-brand" href="/"><img src="img/logos/White.svg" data-retina="true" alt="" height="50"></a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
+    <a class="navbar-brand" href="/admin-panel"><img src="img/logo.png" data-retina="true" alt="" width="150" height="36"></a>
+   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
          	<br>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                <a class="nav-link" href="/">
+                <a class="nav-link" href="/admin-panel">
                     <i class="fa fa-fw fa-dashboard"></i>
                     <span class="nav-link-text">Panel de control</span>
                 </a>
@@ -50,7 +50,7 @@
                 </a>
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Add listing">
-                <a class="nav-link" href="add-listing.html">
+                <a class="nav-link" href="/add-experience">
                     <i class="fa fa-fw fa-plus-circle"></i>
                     <span class="nav-link-text">Nueva experiencia</span>
                 </a>
@@ -139,8 +139,7 @@
 	        </li>
             <li class="nav-item">
                 <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
-                    <i style="font-size: 20px;"class="icon-lock-7"></i>
-                </a>
+            		<i class="fa fa-fw fa-sign-out"></i>Cerrar sesión</a>
             </li>
         </ul>
     </div>

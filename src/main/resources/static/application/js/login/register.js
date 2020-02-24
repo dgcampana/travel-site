@@ -33,34 +33,51 @@ function registerUser() {
 	    },
 
 	    beforeSend: function () {
-	    	$("#preloader").removeClass("d-none");
+	    	loadingButton(true);
 	    },
 	    success: function (data) {
 	    	if( data.code == 200 ){
 	    		$("#successRegister").removeClass("d-none");
 	    		$("#successText").text(data.message);
+	    		loadingButton(false);
+	    		// Se resetea el formulario
+	    		$("#registerFormStep1")[0].reset();
 	    		
 	    		setTimeout(function(){
-	    			window.location.replace("/");
+	    			$("#successRegister").addClass("d-none");
 	    		}, 5000);
+	    		
 	    	}else {
 	    		$("#errorRegister").removeClass("d-none");
 	    		$("#errorText").text(data.message);
+	    		loadingButton(false);
 	    	}
 	    },
 	    error: function (e) {
 	    	$("#errorRegister").removeClass("d-none");
     		$("#errorText").text(e.responseJSON.message);
-	    	$("#preloader").addClass("d-none");
+    		loadingButton(false);
 	    	
 	    	setTimeout(function(){
     			$("#errorRegister").addClass("d-none");
-    		}, 10000);
+    		}, 5000);
 	    },
 	    complete: function() {
-	    	$("#preloader").addClass("d-none");
 		}
 	});
+}
+/**
+ * Oculta o muestra el boton con el icono de cargar 
+ * @param e si es true muestra el boton cargando si no lo oculta
+ */
+function loadingButton(e){
+	if(e){
+		$("#btnSubmitLoad").removeClass("d-none");
+    	$("#btnSubmitRegister").addClass("d-none");
+	}else{
+		$("#btnSubmitLoad").addClass("d-none");
+    	$("#btnSubmitRegister").removeClass("d-none");
+	}
 }
 
 function validFormRegisterStep1() {

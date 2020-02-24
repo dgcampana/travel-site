@@ -13,4 +13,9 @@ public class AdminController {
 		return new ModelAndView("admin/index");
 	}
 	
+	@GetMapping("/add-experience")
+	public ModelAndView doAddExperience() {
+		return new ModelAndView("admin/add-experience");
+	}
+	
 }
