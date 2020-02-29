@@ -462,15 +462,12 @@ footer.sticky-footer {
 
 /*-------- 1.1 Typography --------*/
 body {
-  background: #f8f8f8;
+  background: #FFF;
   color: #777 !important;
-  font-family: "Poppins", Helvetica, sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
 }
 
 .content-wrapper {
-  background: #f8f8f8;
+  background: #f9f9f9;
 }
 
 h1,
@@ -504,7 +501,7 @@ strong {
 /*-------- 1.2 Buttons --------*/
 /*General links color*/
 a {
-  color: #0054a6;
+  color: #ff0364;
   text-decoration: none;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
@@ -581,7 +578,7 @@ a.btn_1:hover,
 /*-------- 1.3 Structure --------*/
 /* Header */
 .bg-default {
-  background-color: #171a1d;
+  background-color: #FFF;
 }
 
 /*============================================================================================*/
