@@ -18,3 +18,8 @@ body {
 .breadcrumb{
 	background-color: #FFF !important;
 }
+
+.gradient-45deg-purple-deep-orange {
+    background: -webkit-linear-gradient(45deg,#ff0364,#ff6e40)!important;
+    background: linear-gradient(45deg,#ff0364,#ff6e40)!important;
+}
