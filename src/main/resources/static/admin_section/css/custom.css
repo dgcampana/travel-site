@@ -20,6 +20,48 @@ body {
 }
 
 .gradient-45deg-purple-deep-orange {
-    background: -webkit-linear-gradient(45deg,#ff0364,#ff6e40)!important;
-    background: linear-gradient(45deg,#ff0364,#ff6e40)!important;
+    background: -webkit-linear-gradient(45deg,#ff0364,#ff4081)!important;
+    background: linear-gradient(45deg,#ff0364,#ff4081)!important;
+}
+
+.nav-link-white{
+	color: #FFF !important;
+}
+
+.color-white {
+	color: #FFF !important;
+}
+
+.navbar-toggler-icon{
+	color: #FFF !important;
+}
+
+.color-badge-admin{
+	color: #00bcd4 !important;
+}
+
+.header-search-input{
+	color: #fff !important;
+    border: 1px solid rgba(230,230,230,.05);
+    background: rgba(230,230,230,.3);
+}
+
+.header-search-input:hover{
+	color: #333 !important;
+    border-bottom: none !important;
+    background: #FFF !important;
+     -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header-search-input:focus{
+	color: #333 !important;
+    border-bottom: none !important;
+    background: #FFF !important;
+     -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header-search-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #FFF;
 }

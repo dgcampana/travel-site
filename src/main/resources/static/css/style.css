@@ -100,11 +100,11 @@ Author URI: http://themeforest.net/user/Ansonika/
   }
 
   header.sticky .main-menu > ul > li span > a {
-    color: #444;
+    color: #ff0364;
   }
   header.sticky .main-menu > ul > li span:hover > a {
     opacity: 1;
-    color: #ff0364;
+    color: #D32F8E;
   }
 
   /* Submenu*/
