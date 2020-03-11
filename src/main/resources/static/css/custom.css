@@ -2,6 +2,9 @@
 /* Your custom styles below */
 /*============================================================================================*/
 /* YOUR CUSTOM CSS */
+.main-color{
+	color: #ff0364; 
+}
 
 @font-face {
     font-family: 'Montserrat-Light'; /*a name to be used later*/

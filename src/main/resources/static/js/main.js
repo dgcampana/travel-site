@@ -41,7 +41,7 @@
 		navbar: {
 			title: 'MENU'
 		},
-		navbars: [{position:'bottom',content: ['<a href="#0">© 2018 Panagea</a>']}]}, 
+		navbars: [{position:'bottom',content: ['<a href="#0">© 2020 Vibes mx</a>']}]}, 
 		{
 		// configuration
 		clone: true,
@@ -277,11 +277,11 @@
 		var width = $(window).width();
 		if (width <= 991) {
 			$('.sticky_horizontal').stick_in_parent({
-				offset_top: 70
+				offset_top: 50
 			});
 		} else {
 			$('.sticky_horizontal').stick_in_parent({
-				offset_top: 87
+				offset_top: 73
 			});
 		}
 	});
@@ -300,8 +300,9 @@
 	// Show more button
 	$(".content_more").hide();
     $(".show_hide").on("click", function () {
-        var txt = $(".content_more").is(':visible') ? 'Read More' : 'Read Less';
-        $(this).text(txt);
+        var txt = $(".content_more").is(':visible') ? '<strong class="main-color">Ver más</strong>' : '<strong class="main-color">Ver menos</strong>';
+        $(this).children("strong").remove();
+        $(this).append(txt);
         $(this).prev('.content_more').slideToggle(200);
     });
 	            
