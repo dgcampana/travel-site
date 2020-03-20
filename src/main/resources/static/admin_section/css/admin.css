@@ -982,7 +982,6 @@ label.fix_spacing {
   border: 0;
   border-radius: 0;
   box-shadow: none;
-  height: 41px;
   color: #868e95;
   margin: 0;
   font-weight: 400;
@@ -999,7 +998,7 @@ label.fix_spacing {
 .styled-select {
   width: 100%;
   overflow: hidden;
-  height: 44px;
+  height: calc(1.5em + 0.75rem + 2px);
   background: #fff url(../img/arrow_down.svg) no-repeat right center;
   border: 1px solid #ced4da;
   -webkit-border-radius: 0.25rem;

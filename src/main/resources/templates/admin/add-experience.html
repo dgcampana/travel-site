@@ -22,32 +22,24 @@
 				<h2><i class="fa fa-file"></i>Informaci&oacute;n general</h2>
 			</div>
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-9">
 					<div class="form-group">
 						<label>Titulo</label>
-						<input type="text" class="form-control" placeholder="Hotel Mariott">
+						<input type="text" class="form-control" placeholder="">
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-3">
 					<div class="form-group">
 						<label>Categoria</label>
 						<div class="styled-select">
-						<select>
-							<option>Tour</option>
-							<option>Hotel</option>
-							<option>Restaurant</option>
-							<option>Bar</option>
-						</select>
+							<select>
+								<option selected>Seleccionar...</option>
+								<option>Experiencia</option>
+								<option>Tour</option>
+								<option>Espectaculo</option>
+								<option>Translado</option>
+							</select>
 						</div>
-					</div>
-				</div>
-			</div>
-			<!-- /row-->
-			<div class="row">
-				<div class="col-md-6">
-					<div class="form-group">
-						<label>Palabras clave</label>
-						<input type="text" class="form-control" placeholder="Las palabras clave deben estar separadas por comas">
 					</div>
 				</div>
 			</div>
@@ -56,85 +48,79 @@
 				<div class="col-md-12">
 					<div class="form-group">
 						<label>Descripci&oacute;n</label>
-						<div class="editor"></div>
+						<textarea class="form-control"> </textarea>
 					</div>
 				</div>
 			</div>
 			<!-- /row-->
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-6">
 					<div class="form-group">
-						<label>Tel&eacute;fono</label>
+						<label>Duraci&oacute;n</label>
 						<input type="text" class="form-control">
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-6">
 					<div class="form-group">
-						<label>Web site</label>
-						<input type="text" class="form-control">
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="form-group">
-						<label>Email</label>
-						<input type="text" class="form-control">
+						<label>Nivel de Actividad</label>
+						<div class="styled-select">
+							<select>
+							 	<option selected>Seleccionar...</option>
+								<option>Baja</option>
+								<option>Media</option>
+								<option>Alta</option>
+							</select>
+						</div>
 					</div>
 				</div>
 			</div>
 			<!-- /row-->
-			<div class="row">
-				<div class="col-md-12">
-					<div class="form-group">
-						<label>Imagenes</label>
-						<form action="/file-upload" class="dropzone"></form>
-					</div>
-				</div>
-			</div>
+			
 			<!-- /row-->
 		</div>
 		<!-- END INFO GENERAL -->
 		<!-- LOCATION -->
 		<div class="box_general padding_bottom">
 			<div class="header_box version_2">
-				<h2><i class="fa fa-map-marker"></i>Location</h2>
+				<h2><i class="fa fa-map-marker"></i>Locaci&oacute;n</h2>
 			</div>
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
-						<label>Select City</label>
-						<div class="styled-select">
-						<select>
-							<option>Miami</option>
-							<option>New York</option>
-							<option>Los Angeles</option>
-							<option>San Francisco</option>
-						</select>
-						</div>
+						<label>Pais</label>
+						<input type="text" class="form-control" value="M&eacute;xico" disabled="disabled">
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="form-group">
-						<label>Address</label>
-						<input type="text" class="form-control" placeholder="ex. 250, Fifth Avenue...">
+						<label>Estado</label>
+						<div class="styled-select">
+							<select>
+							 	<option selected>Seleccionar...</option>
+								<option>San Luis Potosi </option>
+								<option>Veracruz</option>
+								<option>Oaxaca</option>
+								<option>Morelos</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Punto de partida</label>
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label>Punto de regreso</label>
+						<input type="text" class="form-control">
 					</div>
 				</div>
 			</div>
 			<!-- /row-->
-			<div class="row">
-				<div class="col-md-6">
-					<div class="form-group">
-						<label>State</label>
-						<input type="text" class="form-control">
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="form-group">
-						<label>Zip Code</label>
-						<input type="text" class="form-control">
-					</div>
-				</div>
-			</div>
-			
 		</div>
 		<!-- END LOCATION -->
 	  </div>

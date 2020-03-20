@@ -866,7 +866,7 @@ ul#top_menu li a.login, ul#top_menu li a.wishlist_bt_top, ul#top_menu li a.cart-
   width: 22px;
   height: 23px;
   position: relative;
-  top: 8px;
+  top: 13px;
   -moz-transition: opacity 0.5s ease;
   -o-transition: opacity 0.5s ease;
   -webkit-transition: opacity 0.5s ease;
@@ -891,7 +891,7 @@ ul#top_menu li a.login:before, ul#top_menu li a.wishlist_bt_top:before, ul#top_m
   line-height: 1;
 }
 .sticky ul#top_menu li a.login:before, .sticky ul#top_menu li a.wishlist_bt_top:before, .sticky ul#top_menu li a.cart-menu-btn:before {
-  color: #444;
+  color: #ff0364;
 }
 ul#top_menu li a.wishlist_bt_top {
   text-indent: -9999px;
@@ -908,7 +908,7 @@ ul#top_menu li a.login:before {
   content: '\0042';
 }
 ul#top_menu li a.cart-menu-btn {
-  top: 6px;
+  top: 10px;
 }
 @media (max-width: 991px) {
   ul#top_menu li a.cart-menu-btn {
