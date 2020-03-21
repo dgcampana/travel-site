@@ -27,15 +27,15 @@ body {
     */
 }
 
-.nav-link-white{
-	color: #FFF !important;
+.nav-link-pink {
+	color: #ff0364 !important;
+}
+
+.nav-link {
+	color: #FFF;
 }
 
 .color-white {
-	color: #FFF !important;
-}
-
-.navbar-toggler-icon{
 	color: #FFF !important;
 }
 
@@ -67,4 +67,8 @@ body {
 
 .header-search-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #FFF;
+}
+
+.navbar-toggler {
+	font-size: 2rem !important;
 }

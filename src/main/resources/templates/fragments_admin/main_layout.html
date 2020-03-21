@@ -82,7 +82,24 @@
     <script th:src="@{vendor/jquery.magnific-popup.min.js}"></script>
     <script th:src="@{admin_section/js/admin.js}"></script>
     
-
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			changeColorLinkNav();
+			
+			$( window ).resize(function() {
+				changeColorLinkNav();
+			});
+		});
+		
+		function changeColorLinkNav(){
+			var isMobile = $( window ).outerWidth() < 992;
+			if(!isMobile){
+				$(".a-link-nav").addClass("nav-link-pink");
+			} else {
+				$(".a-link-nav").removeClass("nav-link-pink");
+			}
+		}
+	</script>
     <div layout:fragment="javascriptSources"></div>
 </body>
 
