@@ -3,23 +3,9 @@
 /*============================================================================================*/
 /* YOUR CUSTOM CSS */
 .main-color{
-	color: #304ffe; 
+	color: #002b99; 
 }
 
-@font-face {
-    font-family: 'Montserrat-Light'; /*a name to be used later*/
-    src: url('../../fonts/Montserrat/Montserrat-Light.ttf'); /*URL to font*/
-}
-@font-face {
-    font-family: 'Montserrat-Regular'; /*a name to be used later*/
-    src: url('../../fonts/Montserrat/Montserrat-Regular.ttf'); /*URL to font*/
-}
-
-body {
-  font-size: 0.875rem;
-  line-height: 1.6;
-  font-family: "Montserrat-Regular";
-}
 
 .z-depth-0 {
   -webkit-box-shadow: none !important;
@@ -71,4 +57,10 @@ body {
 .hoverable:hover {
   -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.iconh {
+	color: #FFF;
+	font-size: 1.3em;
+	border-radius: 50px;
 }

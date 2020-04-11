@@ -17,52 +17,39 @@
     <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
 
     <!-- BASE CSS -->
-    <link th:href="@{css/bootstrap.css}" rel="stylesheet">
-    <link th:href="@{admin_section/css/admin.css}" rel="stylesheet">
+    <link th:href="@{vendor/bootstrap/css/bootstrap.css}" rel="stylesheet">
     <link th:href="@{css/vendors.css}" rel="stylesheet">
     <link th:href="@{admin_section/css/custom.css}" rel="stylesheet">
     <link th:href="@{vendor/font-awesome/css/font-awesome.min.css}" rel="stylesheet" type="text/css">
 
     <!-- YOUR CUSTOM CSS -->
     <link th:href="@{css/custom.css}" rel="stylesheet">
-
     <script th:src="@{js/modernizr.js}"></script>
 </head>
 
 <body class="fixed-nav sticky-footer" id="page-top">
-    <div id="page">
-        <div th:replace="fragments_admin/header :: header"></div>
-        <div layout:fragment="content"></div>
-        <div th:replace="fragments_admin/footer :: footer"></div>
-    </div>
-    <footer th:fragment="footer" class="sticky-footer" xmlns:th="http://www.w3.org/1999/xhtml">
-        <div class="container">
-            <div class="text-center">
-                <small>Copyright © vibes mx 2020</small>
-            </div>
-        </div>
-    </footer>
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fa fa-angle-up"></i>
-    </a>
-    <!-- Logout Modal-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">¿Preparado para partir?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-	            <span aria-hidden="true">×</span>
-	          </button>
-                </div>
-                <div class="modal-body">Seleccione "Cerrar sesión" a continuación si est&aacute; listo para finalizar su sesi&oacute;n actual.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-primary" href="/logout">Cerrar sesión</a>
-                </div>
-            </div>
-        </div>
+	<div th:replace="fragments_admin/header :: header"></div>
+	<div class="container-tabs secondary-bg ">
+		<div class="container secondary-bg">
+			<ul class="nav nav-pills nav-justified">
+				<li class="nav-item">
+					<a class="nav-link" href="/admin-panel"><i class="pe-7s-home icon hoverable"></i></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/a-events"><i class="pe-7s-date icon hoverable"></i></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/a-payments"><i class="pe-7s-cash icon hoverable"></i></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="a-notify"><i class="pe-7s-bell icon hoverable"></i></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+    <div id="mainLayout" class="container">
+    <div layout:fragment="content"></div>
+    <div th:replace="fragments_admin/footer :: footer"></div>
     </div>
     <!-- Required Js -->
     <script th:inline="javascript">
@@ -81,25 +68,8 @@
     <script th:src="@{vendor/retina-replace.min.js}"></script>
     <script th:src="@{vendor/jquery.magnific-popup.min.js}"></script>
     <script th:src="@{admin_section/js/admin.js}"></script>
-    
-	<script type="text/javascript">
-		$( document ).ready(function() {
-			changeColorLinkNav();
-			
-			$( window ).resize(function() {
-				changeColorLinkNav();
-			});
-		});
-		
-		function changeColorLinkNav(){
-			var isMobile = $( window ).outerWidth() < 992;
-			if(!isMobile){
-				$(".a-link-nav").addClass("nav-link-pink");
-			} else {
-				$(".a-link-nav").removeClass("nav-link-pink");
-			}
-		}
-	</script>
+  
+  
     <div layout:fragment="javascriptSources"></div>
 </body>
 

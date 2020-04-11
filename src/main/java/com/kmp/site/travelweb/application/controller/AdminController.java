@@ -8,14 +8,24 @@ import org.springframework.web.servlet.ModelAndView;
 public class AdminController {
 
 	
-	@GetMapping("/admin-panel")
+	@GetMapping("/a-dashboard")
 	public ModelAndView doWishlistInit() {
 		return new ModelAndView("admin/index");
 	}
 	
-	@GetMapping("/add-experience")
-	public ModelAndView doAddExperience() {
-		return new ModelAndView("admin/add-experience");
+	@GetMapping("/a-new-event")
+	public ModelAndView doAddEvent() {
+		return new ModelAndView("admin/add-event");
+	}
+	
+	@GetMapping("/a-events")
+	public ModelAndView doEvents() {
+		return new ModelAndView("admin/events");
+	}
+	
+	@GetMapping("/a-payments")
+	public ModelAndView doPayments() {
+		return new ModelAndView("admin/payments");
 	}
 	
 }

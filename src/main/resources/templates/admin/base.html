@@ -3,32 +3,13 @@
 				layout:decorate="~{fragments_admin/main_layout}"
 				xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-<title>Vibes</title>
+<title>Vibes mx</title>
 </head>
 <body>
-	<!-- [ Main Content ] start -->
-    <div class="content-wrapper" layout:fragment="content">
-       <div class="container-fluid">
-      <!-- Breadcrumbs-->
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="/admin-panel">Inicio</a>
-        </li>
-        <li class="breadcrumb-item active">Panel de control</li>
-      </ol>
-	  <!-- Content-->
-      <div class="row">
-       
-	  </div>
-		
-	  </div>
-    </div>
-    <!-- [ Main Content ] end -->
-    <div layout:fragment="cssSources">
-   	
-    </div>
-    <div layout:fragment="javascriptSources">
 
+    <div layout:fragment="javascriptSources">
+   		<script th:src="@{vendor/chart.js/Chart.js}"></script>
+   		<script th:src="@{admin_section/js/admin-charts.js}"></script>
     </div>
 </body>
 </html>
