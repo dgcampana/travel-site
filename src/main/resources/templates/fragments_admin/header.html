@@ -1,7 +1,8 @@
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg  bg-default fixed-top gradient-45deg-purple-deep-orange" id="mainNav" th:fragment="header" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
-    <a class="navbar-brand" href="/admin-panel"><img src="img/logo.png" data-retina="true" alt="" width="150" height="36"></a>
+    <!-- <a class="navbar-brand" href="/admin-panel"><img src="img/logo.png" data-retina="true" alt="" width="150" height="36"></a> -->
+    <a class="navbar-brand" href="/admin-panel"><span ><strong style="color: #FFF !important;">VIBES MX - PANEL</strong></span></a>
    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <i class="pe-7s-menu color-white"></i>
     </button>
@@ -13,51 +14,62 @@
                     <span class="nav-link-text">Panel de control</span>
                 </a>
             </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Messages">
-                <a class="nav-link a-link-nav" href="messages.html">
-                    <i class="fa fa-fw fa-envelope-open "></i>
-                    <span class="nav-link-text">Mensajes</span>
-                </a>
-            </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="" data-original-title="Bookings">
-                <a class="nav-link a-link-nav" href="bookings.html">
-                    <i class="fa fa-fw fa-calendar-check-o"></i>
-                    <span class="nav-link-text">Reservaci&oacute;n <span class="badge badge-pill badge-primary">6 New</span></span>
-                </a>
-            </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My listings">
-                <a class="nav-link nav-link-collapse collapsed a-link-nav" data-toggle="collapse" href="#collapseMylistings" data-parent="#mylistings">
+                <a class="nav-link nav-link-collapse collapsed a-link-nav" data-toggle="collapse" href="#collapseAgency" data-parent="#mylistings">
                     <i class="fa fa-fw fa-list"></i>
-                    <span class="nav-link-text">Mis Experiencias</span>
+                    <span class="nav-link-text">Mi agencia</span>
                 </a>
-                <ul class="sidenav-second-level collapse" id="collapseMylistings">
+                <ul class="sidenav-second-level collapse" id="collapseAgency">
                     <li>
-                        <a href="listings.html">Pendientes <span class="badge badge-pill badge-primary">6</span></a>
+                        <a href="/add-experience">Nuevo evento</a>
                     </li>
                     <li>
-                        <a href="listings.html">Activas <span class="badge badge-pill badge-success">6</span></a>
+                        <a href="/add-experience">Eventos</a>
                     </li>
                     <li>
-                        <a href="listings.html">Cerradas<span class="badge badge-pill badge-danger">6</span></a>
+                        <a href="/add-experience">Pagos</a>
+                    </li>
+                    <li>
+                        <a href="/add-experience">Administraci&oacute;n</a>
                     </li>
                 </ul>
             </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Reviews">
-                <a class="nav-link a-link-nav" href="reviews.html">
-                    <i class="fa fa-fw fa-star"></i>
-                    <span class="nav-link-text">Comentario</span>
+            
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My listings">
+                <a class="nav-link nav-link-collapse collapsed a-link-nav" data-toggle="collapse" href="#collapseMarketing" data-parent="#mylistings">
+                    <i class="fa fa-fw fa-list"></i>
+                    <span class="nav-link-text">Marketing</span>
                 </a>
+                <ul class="sidenav-second-level collapse" id="collapseMarketing">
+                    <li>
+                        <a href="listings.html">Imagenes del sitio </a>
+                    </li>
+                    <li>
+                        <a href="listings.html">Alertas </a>
+                    </li>
+                    <li>
+                        <a href="listings.html">Campa&ntilde;as </a>
+                    </li>
+                </ul>
             </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Add listing">
-                <a class="nav-link a-link-nav" href="/add-experience">
-                    <i class="fa fa-fw fa-plus-circle"></i>
-                    <span class="nav-link-text">Nueva experiencia</span>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My listings">
+                <a class="nav-link nav-link-collapse collapsed a-link-nav" data-toggle="collapse" href="#collapseAdministrator" data-parent="#mylistings">
+                    <i class="fa fa-fw fa-list"></i>
+                    <span class="nav-link-text">Super administrador</span>
                 </a>
+                <ul class="sidenav-second-level collapse" id="collapseAdministrator">
+                    <li>
+                        <a href="listings.html">Admin. de agencias </a>
+                    </li>
+                    <li>
+                        <a href="listings.html">Admin. de usuarios </a>
+                    </li>
+                </ul>
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My profile">
-                <a class="nav-link a-link-nav" href="user-profile.html">
+                <a class="nav-link a-link-nav" href="/">
                     <i class="fa fa-fw fa-user"></i>
-                    <span class="nav-link-text">Mi perfil</span>
+                    <span class="nav-link-text">ir al sitio</span>
                 </a>
             </li>
         </ul>

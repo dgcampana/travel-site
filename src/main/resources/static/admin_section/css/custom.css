@@ -20,15 +20,15 @@ body {
 }
 
 .gradient-45deg-purple-deep-orange {
-    background: #ff0364;
+    background: #304ffe;
     /*
-    background: -webkit-linear-gradient(45deg,#ff0364,#ff4081)!important;
-    background: linear-gradient(45deg,#ff0364,#ff4081)!important;
+    background: -webkit-linear-gradient(45deg,#304ffe,#ff4081)!important;
+    background: linear-gradient(45deg,#304ffe,#ff4081)!important;
     */
 }
 
 .nav-link-pink {
-	color: #ff0364 !important;
+	color: #304ffe !important;
 }
 
 .nav-link {

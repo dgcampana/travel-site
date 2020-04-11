@@ -501,7 +501,7 @@ strong {
 /*-------- 1.2 Buttons --------*/
 /*General links color*/
 a {
-  color: #ff0364;
+  color: #304ffe;
   text-decoration: none;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
@@ -567,12 +567,12 @@ a.btn_1:hover,
 }
 
 .btn-primary {
-  background-color: #ff0364;
-  border-color: #ff0364;
+  background-color: #304ffe;
+  border-color: #304ffe;
 }
 .btn-primary:hover {
-  background-color: #ff0364;
-  border-color: #ff0364;
+  background-color: #304ffe;
+  border-color: #304ffe;
   -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

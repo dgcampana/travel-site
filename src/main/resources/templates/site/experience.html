@@ -259,8 +259,11 @@
     </div>
     <div layout:fragment="cssSources"></div>
     <div layout:fragment="javascriptSources">
-   		
+	    <script type="text/javascript">
+		    $( document ).ready(function() {
+		        $("#container-header").removeClass("container-custom");
+		    });
+	    </script>
     </div>
-   
 </body>
 </html>
